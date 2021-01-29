@@ -1,0 +1,28 @@
+.nav-right-container {
+  position: sticky;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--light-border-gray);
+  height: fit-content;
+}
+
+.nav-right-container.dm {
+  border: 2px solid var(--dark-border-gray)
+}
+
+h3 {
+  font-size: 30px;
+  color: var(--teal);
+  margin-bottom: 10px;
+}
+
+.nav-right-container a {
+  color: var(--reg-blue);
+  padding: 10px 5px;
+}
+
+.nav-right-container a:hover {
+  color: var(--darker-blue);
+}

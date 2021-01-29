@@ -1,0 +1,13 @@
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  .widget-icon {
+   font-size: 25px; 
+  }
+
+  .login-button {
+    margin-right: 10px;
+  }
+}

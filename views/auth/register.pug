@@ -1,0 +1,18 @@
+
+extends auth-layout.pug
+
+include ../utils.pug
+
+block content
+  +validationErrorSummary(errors)
+  form(action='/users/register' method='post')
+    input(type='hidden' name='_csrf' value=csrfToken)
+    +field('Username', 'username', user.username)
+    +field('Email Address', 'email', user.email)
+    +field('Password', 'password', user.password, 'password')
+    +field('Confirm Password', 'confirmPassword', '', 'password')
+    div(class='py-4')
+      button(class="form-submit theme" type='submit') Register
+      a(class="form-submit theme cancel" href='/') Cancel
+  div
+    p(class="redirect"): a(href='/users/login') Already have an account?

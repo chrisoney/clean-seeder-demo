@@ -1,0 +1,37 @@
+extends layout
+
+append head
+  link(rel="stylesheet" href="/stylesheets/discover.css")
+  //- add page specific js
+  script(src="/javascripts/discover.js" type="module" defer)
+
+block content
+  div(class="main-container")
+    h1=title
+    div(class="secondary-container")
+      div(class="discover-container")
+        div(class="discover-nav")
+          span(id="stories" class="nav-item active theme") Stories
+          span(id="users" class="nav-item theme") Users
+          span(id="follows" class="nav-item theme") Follows
+        div(class="tab-content theme")
+          ul
+            each story in stories
+              li(class="story-container theme")
+                div(class="story-header-container theme")
+                  span(class="story-title")=story.title
+                  div(class="story-button-container")
+                    span(class=`fas fa-chevron-circle-left toggle-${story.id}`)
+                    span(class=`fas fa-arrow-circle-right id-${story.id}`)
+                div(class=`story-details-container container-${story.id} theme`)
+                  div(class="story-details-top theme")
+                    div(class="story-details-top-left")
+                      a(href=story.link class="link") Link to Story
+                    div(class="story-details-top-right")
+                      div(class=`subscribe-button sub-${story.id} theme`) Subscribe
+                  div(class="story-details-bottom")
+                    div(class="description-container theme")
+                      span(id=`${story.id}` class="reveal") Description
+                      p(class=`description-text-${story.id} hidden`)= story.description
+      include nav-section
+      

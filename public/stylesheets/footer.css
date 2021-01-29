@@ -1,0 +1,27 @@
+.footer-container {
+  background: var(--teal);
+  height: 8%;
+  margin-top: 1%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.footer-container * {
+  color: white;
+  font-size: 1.3em;
+}
+
+.icon {
+  margin-right: .5em;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: var(--darker-blue);
+}

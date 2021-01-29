@@ -1,0 +1,80 @@
+extends layout
+include utils
+
+append head
+  link(rel="stylesheet" href="/stylesheets/story.css")
+  //- add page specific js
+  script(src="/javascripts/story.js" type="module" defer)
+
+
+block content
+  div(class="main-container")
+    div(class="back-button-container")
+      span(class="fas fa-caret-left")
+      span(class="back-text") Back
+    a(href=story.link class="story-title")= story.title
+    div(class="story-container theme")
+      div(class="subscribe-container theme")
+        span(class="sub-list-title")
+        each sub in subs
+          div(class="single-sub-container")
+            div(class="sub-top")
+              span(class="sub-list-username")= sub.User.username
+              if (sub.User.followers.length > 0)
+                button(class=`follow-button follow-${sub.User.id} theme`) Unfollow
+              else
+                button(class=`follow-button follow-${sub.User.id} theme`) Follow
+            div(class="sub-bottom")
+              span=`Book: ${sub.book}`
+              span=`Chapter: ${sub.chapter}`
+      div(class="details-container theme")
+        div(class="top-details")
+        div(class="bottom-details")
+          div(class="details-description")= story.description
+          div(class="subscribe-user")
+            span(class="subscribe-user-title") Your Subscription
+            if (story.Subscriptions[0])
+              +dashStoryDetail("Book:", story.Subscriptions[0].book, story.id, "book")
+              +dashStoryDetail("Chapter:", story.Subscriptions[0].chapter, story.id, "chapter")
+            else
+              p.no-review You are not subscribed
+          div(class="recommend-user")
+            span(class="recommend-user-title") Your Recommendation
+            div(class="recommend-user-container")
+              span(class="label") Rating:
+              div(id=story.id class="stars user-stars")
+                - var i = 0, j = story.Recommendations[0].rating + 1
+                while i < story.Recommendations[0].rating
+                  span(id=(i+1) class="fas fa-star user-rating theme")
+                  - i++
+                while j <= 5
+                  span(id=j class="far fa-star user-rating theme")
+                  - j++
+            div(class="review-container")
+              span(class="reveal") Review
+              if (story.Recommendations[0].review)
+                +review(story.Recommendations[0].id, story.Recommendations[0].review, false)
+              else
+                +review(null, "No review yet", true)
+      div(class="recommend-container theme")
+        each rec in recs
+          div(class="single-rec-container")
+            div(class="rec-top")
+              span(class="sub-list-username")= rec.User.username
+              if (rec.User.followers.length > 0)
+                button(class=`follow-button follow-${rec.User.id} theme`) Unfollow
+              else
+                button(class=`follow-button follow-${rec.User.id} theme`) Follow
+            div(class="rec-bottom")
+              div(class="rec-review")
+                - var i = 0, j = rec.rating + 1
+                  while i < rec.rating
+                    span(id=(i+1) class="fas fa-star theme")
+                    - i++
+                  while j <= 5
+                    span(id=j class="far fa-star theme")
+                    - j++
+              if rec.review
+                span= rec.review
+              else
+                span.no-review No review yet
