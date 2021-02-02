@@ -26,27 +26,27 @@ module.exports = {
       },
     */
     // Grabbing sub seeds I created beforehand
-    let values = tempSubs;
-    // let values = currentSubs;
+    // let values = tempSubs;
+    let values = currentSubs;
     // Grabbing all of the existing recommendations for users that aren't my own account
 
-    // let oldArray = await Recommendation.findAll({
-    //   where: {
-    //     userId: {
-    //       [Op.ne]: 1
-    //     }
-    //   }
-    // })
-    // // Using the recommendations to create subscriptions that match
-    // for (let i = 0; i < oldArray.length; i++){
-    //   let oldObj = oldArray[i];
-    //   values.push({
-    //     book: `${Math.floor(Math.random() * 5)}`,
-    //     chapter: `${Math.floor(Math.random() * 30)}`,
-    //     userId: oldObj.userId,
-    //     storyId: oldObj.storyId,
-    //   })
-    // }
+    let oldArray = await Recommendation.findAll({
+      where: {
+        userId: {
+          [Op.ne]: 1
+        }
+      }
+    })
+    // Using the recommendations to create subscriptions that match
+    for (let i = 0; i < oldArray.length; i++){
+      let oldObj = oldArray[i];
+      values.push({
+        book: `${Math.floor(Math.random() * 5)}`,
+        chapter: `${Math.floor(Math.random() * 30)}`,
+        userId: oldObj.userId,
+        storyId: oldObj.storyId,
+      })
+    }
     
     // Seeding that new data
     return queryInterface.bulkInsert('Subscriptions', values, {});
