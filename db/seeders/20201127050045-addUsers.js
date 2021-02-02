@@ -41,15 +41,17 @@ module.exports = {
     },
   ];
   // Creating more users
-  for (let i = 5; i < 45; i++){
-    let newUser = {
-      username: faker.internet.userName(),
-      email: faker.internet.email(),
-      // Making the password easy to figure out if I want to log into another user
-      hashedPassword: await bcrypt.hash(`password${i}`, 10),
-    }
-    users.push(newUser);
-  }
+
+  // for (let i = 5; i < 45; i++){
+  //   let newUser = {
+  //     username: faker.internet.userName(),
+  //     email: faker.internet.email(),
+  //     // Making the password easy to figure out if I want to log into another user
+  //     hashedPassword: await bcrypt.hash(`password${i}`, 10),
+  //   }
+  //   users.push(newUser);
+  // }
+  
   // Actually inserting that data into the table
   return queryInterface.bulkInsert('Users', users, {});
   },

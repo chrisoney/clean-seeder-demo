@@ -24,7 +24,7 @@ module.exports = {
     */
 
     // I wrote all this data myself so there's no need to set up fake data here
-    return queryInterface.bulkInsert('Stories', currentStories, {});
+    return queryInterface.bulkInsert('Stories', tempStories, {});
   },
 
   down: (queryInterface, Sequelize) => {
