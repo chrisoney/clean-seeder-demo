@@ -43,12 +43,12 @@ module.exports = {
         defaultValue: Sequelize.fn('now')
       }
     }, {
-        uniqueKeys: {
-          actions_unique: {
-              fields: ['userId', 'storyId']
-          }
+      uniqueKeys: {
+        actions_unique: {
+            fields: ['userId', 'storyId']
+        }
       }
-  });
+    });
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('Recommendations');

@@ -109,6 +109,13 @@ const currentRecs = [
 
   },
   {
+    rating: 3,
+    review: 'Long hiatuses, but a fun story overall',
+    userId: 1, // Chris
+    storyId: 1,
+
+  },
+  {
     rating: 4,
     review: 'Long time between chapters but the world building is top notch',
     userId: 1, // Chris
