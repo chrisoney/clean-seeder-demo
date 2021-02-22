@@ -1,6 +1,6 @@
 **/**/.DS_Store
 .env
-node_modules
-routes
-views
-public
+node_modules/
+routes/
+views/
+public/
