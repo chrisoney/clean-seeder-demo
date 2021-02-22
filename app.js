@@ -40,15 +40,19 @@ app.use(
 // create Session table if it doesn't already exist
 store.sync();
 
-app.use(restoreUser)
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use(requireAuth)
-app.use('/stories', storiesRouter);
+// We don't have the code for these routes
+
+// app.use(restoreUser)
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
+// app.use(requireAuth)
+// app.use('/stories', storiesRouter);
 
 // Just so I can grab the data before I clear out my database for whatever reason.
-app.get("/grabdata", asyncHandler( async(req, res) => {
-  const data = await User.findByPk(req.session.auth.userId, {
+app.get("/query-tester", asyncHandler( async(req, res) => {
+  const userToTest = 1;
+  const data = await User.findByPk(userToTest, {
+    attributes: ["username"],
     include: [{
       model: Subscription,
       as: 'subscriptions',
