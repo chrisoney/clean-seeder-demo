@@ -15,6 +15,7 @@ module.exports = {
       }], {});
     */
   // Creating a sample password for the users that I want to keep
+  // hashSync is synchronous so we don't have to await it
   const password = bcrypt.hashSync('Hunter12!', 10);
   // Users that I want locked down in my database
   let users = [
@@ -40,9 +41,11 @@ module.exports = {
       hashedPassword: password,
     },
   ];
-  // Creating more users
 
-  for (let i = 5; i < 45; i++){
+  // Creating randomized users
+  const numNewUsers = 45;
+  // Each loop will create a new user
+  for (let i = 5; i < numNewUsers; i++){
     let newUser = {
       username: faker.internet.userName(),
       email: faker.internet.email(),
