@@ -1,5 +1,10 @@
 'use strict';
-const { tempStories, currentStories, currentFollows, currentRecs } = require('../../current.js');
+// These imports are mostly for the purposes of the demo. All I usually care
+// about is the currentStories array
+const { 
+  tempStories, 
+  currentStories, 
+} = require('../../current.js');
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
