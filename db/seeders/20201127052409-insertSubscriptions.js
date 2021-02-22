@@ -1,6 +1,9 @@
 'use strict';
+// tempSubs is just for demo lecture purposes
 const { tempSubs, currentSubs } = require('../../current.js');
+// Importing Recommendation so that I can base Subscriptions on what I have
 const { Recommendation } = require('../models')
+// Just used to ignore the seeded data for the user I care about
 const { Op } = require('../models').Sequelize;
 
 

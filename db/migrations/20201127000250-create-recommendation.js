@@ -35,14 +35,17 @@ module.exports = {
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        // This is so that we can ignore it in the seeders
         defaultValue: Sequelize.fn('now')
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        // This is so that we can ignore it in the seeders
         defaultValue: Sequelize.fn('now')
       }
     }, {
+      // This is to set up a composite unique constraint on two different columns
       uniqueKeys: {
         actions_unique: {
             fields: ['userId', 'storyId']

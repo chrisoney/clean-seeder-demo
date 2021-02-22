@@ -25,11 +25,13 @@ module.exports = {
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        // This is so that we can ignore it in the seeders
         defaultValue: Sequelize.fn('now')
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        // This is so that we can ignore it in the seeders
         defaultValue: Sequelize.fn('now')
       }
     });

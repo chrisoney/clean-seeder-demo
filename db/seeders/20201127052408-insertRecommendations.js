@@ -1,34 +1,25 @@
 'use strict';
+// tempRecs is just for demo lecture purposes
 const { tempRecs, currentRecs } = require('../../current.js');
+// importing these so we can query those tables for counts
 const { User, Story } = require('../models')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
+   
     /*
-      Add altering commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkInsert('People', [{
-        name: 'John Doe',
-        isBetaMember: false
-      }], {});
-
       {
-        rating: num,
+        rating: integer,
         review: '',
-        userId: num,
-        storyId: num,
-        createdAt: new Date(),
-        updatedAt: new Date()
+        userId: integer,
+        storyId: integer,
       },
     */
     // Pulling in the recommendations that I wrote myself
     let values = currentRecs;
-    // let values = currentRecs;
+
     // Making new recommendations with the number of reviews per user, 
     // number of users I have, number of stories I have, and fake reviews 
-  
     function makeRecommendations (number, user, story, reviews){
       const result = [];
       for (let k = 2; k <= user; k++){
@@ -65,7 +56,7 @@ module.exports = {
       `I highly recommend this story to everybody. Even if you don't think you'll like it from what you hear. Not only does this story dodge every single pitfall that comes its way, it absolutely obliterates them.`, 
       `This is absolutely terrible`, 
     ]
-    // Querying to figure out how many users and stories I've seeded
+    // Querying to figure out how many users and stories I've seeded dynamically
     let numUsers = await User.count();
     let numStories = await Story.count();
     // Grabbing those new fake recommendations
