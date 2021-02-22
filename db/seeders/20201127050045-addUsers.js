@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const faker = require('faker');
 
 module.exports = {
-  up: async(queryInterface, Sequelize) => {
+  up: (queryInterface, Sequelize) => {
     /*
       Add altering commands here.
       Return a promise to correctly handle asynchronicity.
@@ -15,7 +15,7 @@ module.exports = {
       }], {});
     */
   // Creating a sample password for the users that I want to keep
-  const password = await bcrypt.hash('Hunter12!', 10);
+  const password = bcrypt.hashSync('Hunter12!', 10);
   // Users that I want locked down in my database
   let users = [
     {
@@ -47,7 +47,7 @@ module.exports = {
       username: faker.internet.userName(),
       email: faker.internet.email(),
       // Making the password easy to figure out if I want to log into another user
-      hashedPassword: await bcrypt.hash(`password${i}`, 10),
+      hashedPassword: bcrypt.hashSync(`password${i}`, 10),
     }
     users.push(newUser);
   }
