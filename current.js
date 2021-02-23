@@ -28,23 +28,22 @@ const tempSubs = [
   {
     book: '0',
     chapter: 'When the Student is Ready, part 1',
-    userId: 1,
-    storyId: 1,
+    user: "chris",
+    story: "Dungeon Crawler Carl"
 
   },
   {
     book: '0',
     chapter: 'Food and Growth',
-    userId: 1,
-    storyId: 2,
+    user: "chris",
+    story: "Apocalypse: Generic System"
 
   },
   {
     book: '7',
     chapter: 'Interlude - The Tribes of Izril',
-    userId: 1,
-    storyId: 3,
-
+    user: "chris",
+    story: "The Wandering Inn"
   },
 ];
 

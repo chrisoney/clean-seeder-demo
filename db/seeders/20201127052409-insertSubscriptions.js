@@ -2,7 +2,7 @@
 // tempSubs is just for demo lecture purposes
 const { tempSubs, currentSubs } = require('../../current.js');
 // Importing Recommendation so that I can base Subscriptions on what I have
-const { Recommendation, User } = require('../models')
+const { Recommendation, User, Story } = require('../models')
 // Just used to ignore the seeded data for the user I care about
 const { Op } = require('../models').Sequelize;
 
@@ -12,7 +12,18 @@ module.exports = {
     /*
     */
     // Grabbing sub seeds I created beforehand
-    let values = tempSubs;
+    let values = [];
+    const startingSubs = tempSubs;
+    for (let x = 0; x < startingSubs.length; x++){
+      let sub = startingSubs[x];
+      const newSub = { book: sub.book, chapter: sub.chapter }
+      const user = await User.findOne({ where: { username: sub.user } });
+      newSub.userId = user.id;
+      const story = await Story.findOne({ where: { title: sub.story } });
+      newSub.storyId = story.id;
+      values.push(newSub);
+    }
+
     // Grabbing all of the existing recommendations for users that aren't my own account
     const myUser = await User.findOne({ where: { username: "chris" } })
     const myId = myUser.id;
