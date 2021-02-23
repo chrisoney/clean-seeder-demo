@@ -19,12 +19,12 @@ module.exports = {
     let values = currentRecs;
 
     // Making new recommendations with the number of reviews per user, 
-    // number of users I have, number of stories I have, and fake reviews 
-    function makeRecommendations (number, user, story, reviews){
+    // number of users I have, number of stories I have, fake reviews, and id to start at
+    function makeRecommendations(number, user, story, reviews, start) {
       const result = [];
       // Looping through all the users except the first one to add reviews for
       // them 
-      for (let k = 2; k <= user; k++){
+      for (let k = start; k <= user; k++){
         // Keeping track of which stories this user has reviewed
         let stories = [];
         for (let i = 0; i < number; i++){
@@ -67,14 +67,17 @@ module.exports = {
       `This is absolutely terrible`, 
     ]
     // Querying to figure out how many users and stories I've seeded dynamically
-    let numUsers = await User.count();
-    let numStories = await Story.count();
+    const numUsers = await User.count();
+    const numStories = await Story.count();
+    const numReviews = 5;
+    let start = await User.findOne();
+    start = start.id + 1;
     // Grabbing those new fake recommendations. 5 is the number of recommendations
     // per user. numUsers and numStories are self explanatory. Reviews are just
     // a few fake reviews I created/stole from a website (I'm sure you can tell
     // which is which). Fun idea: make different tiers of reviews you can choose
     // from based on a rating!
-    let recArray = makeRecommendations(5, numUsers, numStories, reviews);
+    let recArray = makeRecommendations(numReviews, numUsers, numStories, reviews, start);
     // Combining what I wrote myself with what I used the function to create
     values.push(...recArray);
 
