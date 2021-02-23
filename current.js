@@ -3,22 +3,22 @@ const tempRecs = [
   {
     rating: 3,
     review: 'Long hiatuses, but a fun story overall',
-    userId: 1,
-    storyId: 1,
+    user: "chris",
+    story: "Dungeon Crawler Carl"
 
   },
   {
     rating: 4,
     review: 'Long time between chapters but the world building is top notch',
-    userId: 1,
-    storyId: 2,
+    user: "chris",
+    story: "Apocalypse: Generic System"
 
   },
   {
     rating: 5,
     review: 'Fantastic story, would always recommend.',
-    userId: 1,
-    storyId: 3,
+    user: "chris",
+    story: "The Wandering Inn"
 
   },
 ];
@@ -308,13 +308,6 @@ const currentRecs = [
     storyId: 29,
 
   },
-  {
-    rating: 5,
-    review: 'I hate vampires but absolutely love this story.',
-    userId: 1, // Chris
-    storyId: 30
-
-  },
 ]
 
 // Hardcoded data for my own account
@@ -522,13 +515,6 @@ const currentSubs = [
     storyId: 29,
 
   },
-  {
-    book:'0',
-    chapter:'88',
-    userId: 1, // Chris
-    storyId: 30,
-
-  },
 ];
 
 // Hardcoded data for my own account
@@ -552,13 +538,6 @@ const currentFollows = [
 
 // Hardcoded data for stories
 const currentStories = [
-  {
-    title: 'The Gods Are Crazy',
-    description: `Evil is rising.  The world is rent by strife.  The gods have turned away from us.  In times past, heroes of sword and sorcery have always risen to turn back the tide of darkness...  But what will become of us all, now that swords are obsolete, sorcery is industrialized, and heroism itself is considered a relic of the past?
-    The times are changing...`,
-    link: 'https://tiraas.net/',
-
-  },
   {
     title: 'Worth the Candle',
     description: `A teenager struggling after the death of his best friend finds himself in a fantasy world - one which seems to be an amalgamation of every Dungeons and Dragons campaign they ever played together. Now he's stuck trying to find the answers to why he's there and what this world is trying to say. The most terrifying answer might be that this world is an expression of the person he was back on Earth.`,

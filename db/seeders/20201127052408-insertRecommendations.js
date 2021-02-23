@@ -7,7 +7,18 @@ const { User, Story } = require('../models')
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     // Pulling in the recommendations that I wrote myself
-    let values = currentRecs;
+    let values = [];
+    const startingRecs = tempRecs;
+    for (let x = 0; x < startingRecs.length; x++){
+      let rec = startingRecs[x];
+      const newRec = { rating:rec.rating, review: rec.review }
+      const user = await User.findOne({ where: { username: rec.user } });
+      newRec.userId = user.id;
+      const story = await Story.findOne({ where: { title: rec.story } });
+      newRec.storyId = story.id;
+      values.push(newRec);
+    }
+     
 
     // Making new recommendations with the number of reviews per user, 
     // number of users I have, number of stories I have, fake reviews, and id to start at
