@@ -2,7 +2,7 @@
 // tempSubs is just for demo lecture purposes
 const { tempSubs, currentSubs } = require('../../current.js');
 // Importing Recommendation so that I can base Subscriptions on what I have
-const { Recommendation } = require('../models')
+const { Recommendation, User } = require('../models')
 // Just used to ignore the seeded data for the user I care about
 const { Op } = require('../models').Sequelize;
 
@@ -23,13 +23,17 @@ module.exports = {
     // let values = tempSubs;
     let values = currentSubs;
     // Grabbing all of the existing recommendations for users that aren't my own account
+    const myUser = await User.findOne({ where: { username: "chris" } })
+    const myId = myUser.id;
     let oldArray = await Recommendation.findAll({
       where: {
         userId: {
-          [Op.ne]: 1
+          [Op.ne]: myId
         }
       }
     })
+    const maxBook = 5;
+    const maxChapter = 30;
     // Using the recommendations to create subscriptions that match
     for (let i = 0; i < oldArray.length; i++){
       // We're going based off the recommendations so this just grabs each one
@@ -37,9 +41,9 @@ module.exports = {
       let oldObj = oldArray[i];
       values.push({
         // Completely random book
-        book: `${Math.floor(Math.random() * 5)}`,
+        book: `${Math.floor(Math.random() * maxBook)}`,
         // Completely random chapter
-        chapter: `${Math.floor(Math.random() * 30)}`,
+        chapter: `${Math.floor(Math.random() * maxChapter)}`,
         // We want these last two to be the same as what is in the recommendation
         userId: oldObj.userId,
         storyId: oldObj.storyId,
