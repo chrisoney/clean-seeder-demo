@@ -22,15 +22,25 @@ module.exports = {
     // number of users I have, number of stories I have, and fake reviews 
     function makeRecommendations (number, user, story, reviews){
       const result = [];
+      // Looping through all the users except the first one to add reviews for
+      // them 
       for (let k = 2; k <= user; k++){
+        // Keeping track of which stories this user has reviewed
         let stories = [];
         for (let i = 0; i < number; i++){
+          // Grabbing a random review index
           let spot = Math.floor(Math.random() * reviews.length)
+          // Grabbing a random story
           let storyId =  Math.floor(Math.random() * story) + 1;
+          // Making sure this user hasn't reviewed this story yet
           while (stories.includes(storyId)) storyId =  Math.floor(Math.random() * story) + 1;
+          // Adding the id of the story so we can check against it later on
+          // when randomly grabbing a story id
           stories.push(storyId);
           result.push({
+            // completely random rating
             rating: Math.floor(Math.random() * 5) + 1,
+            // Grabbing the review with the index we generated a few lines ago
             review: reviews[spot],
             userId: k,
             storyId,
@@ -59,7 +69,11 @@ module.exports = {
     // Querying to figure out how many users and stories I've seeded dynamically
     let numUsers = await User.count();
     let numStories = await Story.count();
-    // Grabbing those new fake recommendations
+    // Grabbing those new fake recommendations. 5 is the number of recommendations
+    // per user. numUsers and numStories are self explanatory. Reviews are just
+    // a few fake reviews I created/stole from a website (I'm sure you can tell
+    // which is which). Fun idea: make different tiers of reviews you can choose
+    // from based on a rating!
     let recArray = makeRecommendations(5, numUsers, numStories, reviews);
     // Combining what I wrote myself with what I used the function to create
     values.push(...recArray);
