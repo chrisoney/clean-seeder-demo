@@ -1,3 +1,4 @@
+// Only for lecture purposes
 const tempRecs = [
   {
     rating: 3,
@@ -22,6 +23,7 @@ const tempRecs = [
   },
 ];
 
+// Only for lecture purposes
 const tempSubs = [
   {
     book: '0',
@@ -39,20 +41,21 @@ const tempSubs = [
   },
   {
     book: '7',
-    chapter: 'Interlude – The Tribes of Izril',
+    chapter: 'Interlude - The Tribes of Izril',
     userId: 1,
     storyId: 3,
 
   },
 ];
 
+// Only for lecture purposes
 const tempStories = [
   {
     title: 'The Wandering Inn',
     description: `An inn is a place to rest, a place to talk and share stories, or a place to find adventures, a starting ground for quests and legends.
-    In this world, at least. To Erin Solstice, an inn seems like a medieval relic from the past. But here she is, running from Goblins and trying to survive in a world full of monsters and magic. She’d be more excited about all of this if everything wasn’t trying to kill her.
-    But an inn is what she found, and so that’s what she becomes. An innkeeper who serves drinks to heroes and monsters–
-    Actually, mostly monsters. But it’s a living, right?
+    In this world, at least. To Erin Solstice, an inn seems like a medieval relic from the past. But here she is, running from Goblins and trying to survive in a world full of monsters and magic. She'd be more excited about all of this if everything wasn't trying to kill her.
+    But an inn is what she found, and so that's what she becomes. An innkeeper who serves drinks to heroes and monsters-
+    Actually, mostly monsters. But it's a living, right?
     This is the story of the Wandering Inn.
     `,
     link: 'https://wanderinginn.com/',
@@ -60,9 +63,9 @@ const tempStories = [
   },
   {
     title: 'Delve',
-    description: `Delve is an isekai litrpg that follows an average guy who just happened to wake up in a forest one day. He wasn’t summoned to defeat the demon lord or to save the world or anything like that, at least as far as he can tell. The only creature there to greet him was a regular old squirrel.
-    Soon enough, he meets other people, only to discover that he can’t speak the language, and that not everybody immediately trusts random pajama-wearing strangers they met in the middle of the wilderness. Things generally go downhill from there, at least until the blue boxes start appearing.
-    Delve is a story about finding your way in a new, strange, and dangerous world. It’s about avoiding death, figuring out what the heck is going on, and trying to make some friends along the way. It’s not about getting home, so much as finding a new one.
+    description: `Delve is an isekai litrpg that follows an average guy who just happened to wake up in a forest one day. He wasn't summoned to defeat the demon lord or to save the world or anything like that, at least as far as he can tell. The only creature there to greet him was a regular old squirrel.
+    Soon enough, he meets other people, only to discover that he can't speak the language, and that not everybody immediately trusts random pajama-wearing strangers they met in the middle of the wilderness. Things generally go downhill from there, at least until the blue boxes start appearing.
+    Delve is a story about finding your way in a new, strange, and dangerous world. It's about avoiding death, figuring out what the heck is going on, and trying to make some friends along the way. It's not about getting home, so much as finding a new one.
     Did I mention that there will be math?`,
     link: 'https://www.royalroad.com/fiction/25225/delve',
 
@@ -70,11 +73,11 @@ const tempStories = [
   {
     title: "Dungeon Crawler Carl",
     description: `A man. His ex-girlfriend's cat. A sadistic game show unlike anything in the universe: a dungeon crawl where survival depends on killing your prey in the most entertaining way possible.
-    In a flash, every human-erected construction on Earth—from Buckingham Palace to the tiniest of sheds—collapses in a heap, sinking into the ground.
+    In a flash, every human-erected construction on Earth-from Buckingham Palace to the tiniest of sheds-collapses in a heap, sinking into the ground.
     The buildings and all the people inside have all been atomized and transformed into the dungeon: an 18-level labyrinth filled with traps, monsters, and loot. A dungeon so enormous, it circles the entire globe.
     Only a few dare venture inside. But once you're in, you can't get out. And what's worse, each level has a time limit. You have but days to find a staircase to the next level down, or it's game over. In this game, it's not about your strength or your dexterity. It's about your followers, your views. Your clout. It's about building an audience and killing those goblins with style.
     You can't just survive here. You gotta survive big.
-    You gotta fight with vigor, with excitement. You gotta make them stand up and cheer. And if you do have that "it" factor, you may just find yourself with a following. That's the only way to truly survive in this game—with the help of the loot boxes dropped upon you by the generous benefactors watching from across the galaxy.
+    You gotta fight with vigor, with excitement. You gotta make them stand up and cheer. And if you do have that "it" factor, you may just find yourself with a following. That's the only way to truly survive in this game-with the help of the loot boxes dropped upon you by the generous benefactors watching from across the galaxy.
     They call it Dungeon Crawler World. But for Carl, it's anything but a game.`,
     link: 'https://www.royalroad.com/fiction/29358/dungeon-crawler-carl-book-2-carls-doomsday-scenario',
 
@@ -100,6 +103,7 @@ const tempStories = [
   },
 ];
 
+// Hardcoded data for my own account
 const currentRecs = [
   {
     rating: 3,
@@ -311,50 +315,9 @@ const currentRecs = [
     storyId: 30
 
   },
-  {
-    rating: 4,
-    review: 'Slow but worth the wait',
-    userId: 1, // Chris
-    storyId: 31
-
-  },
-  {
-    rating: 0,
-    review: '',
-    userId: 1, // Chris
-    storyId: 32
-
-  },
-  {
-    rating: 5,
-    review: 'Really fun. This writer is hilarious',
-    userId: 1, // Chris
-    storyId: 33
-
-  },
-  {
-    rating: 5,
-    review: `Can't wait to see where this one goes`,
-    userId: 1, // Chris
-    storyId: 34
-
-  },
-  {
-    rating: 4,
-    review: 'A really fun take on gaming. Interested to see if the plot can keep going strong.',
-    userId: 1, // Chris
-    storyId: 35
-
-  },
-  {
-    rating: 4,
-    review: 'Nothing game-changing so far but I like the skill system',
-    userId: 1, // Chris
-    storyId: 36,
-
-  },
 ]
 
+// Hardcoded data for my own account
 const currentSubs = [
   {
     book: '0',
@@ -372,7 +335,7 @@ const currentSubs = [
   },
   {
     book: '7',
-    chapter: 'Interlude – The Tribes of Izril',
+    chapter: 'Interlude - The Tribes of Izril',
     userId: 1, // Chris
     storyId: 3,
 
@@ -566,50 +529,9 @@ const currentSubs = [
     storyId: 30,
 
   },
-  {
-    book:'0',
-    chapter:'18',
-    userId: 1, // Chris
-    storyId: 31,
-
-  },
-  {
-    book:'0',
-    chapter:'Loading 0.0',
-    userId: 1, // Chris
-    storyId: 32,
-
-  },
-  {
-    book:'0',
-    chapter:'33',
-    userId: 1, // Chris
-    storyId: 33,
-
-  },
-  {
-    book:'0',
-    chapter:'23',
-    userId: 1, // Chris
-    storyId: 34,
-
-  },
-  {
-    book:'0',
-    chapter:'41',
-    userId: 1, // Chris
-    storyId: 35,
-
-  },
-  {
-    book:'0',
-    chapter:'94',
-    userId: 1, // Chris
-    storyId: 36,
-
-  },
 ];
 
+// Hardcoded data for my own account
 const currentFollows = [
   {
     followerId: 1,
@@ -628,11 +550,12 @@ const currentFollows = [
   },
 ];
 
+// Hardcoded data for stories
 const currentStories = [
   {
     title: 'The Gods Are Crazy',
-    description: `Evil is rising.  The world is rent by strife.  The gods have turned away from us.  In times past, heroes of sword and sorcery have always risen to turn back the tide of darkness…  But what will become of us all, now that swords are obsolete, sorcery is industrialized, and heroism itself is considered a relic of the past?
-    The times are changing…`,
+    description: `Evil is rising.  The world is rent by strife.  The gods have turned away from us.  In times past, heroes of sword and sorcery have always risen to turn back the tide of darkness...  But what will become of us all, now that swords are obsolete, sorcery is industrialized, and heroism itself is considered a relic of the past?
+    The times are changing...`,
     link: 'https://tiraas.net/',
 
   },
@@ -645,9 +568,9 @@ const currentStories = [
   {
     title: 'The Wandering Inn',
     description: `An inn is a place to rest, a place to talk and share stories, or a place to find adventures, a starting ground for quests and legends.
-    In this world, at least. To Erin Solstice, an inn seems like a medieval relic from the past. But here she is, running from Goblins and trying to survive in a world full of monsters and magic. She’d be more excited about all of this if everything wasn’t trying to kill her.
-    But an inn is what she found, and so that’s what she becomes. An innkeeper who serves drinks to heroes and monsters–
-    Actually, mostly monsters. But it’s a living, right?
+    In this world, at least. To Erin Solstice, an inn seems like a medieval relic from the past. But here she is, running from Goblins and trying to survive in a world full of monsters and magic. She'd be more excited about all of this if everything wasn't trying to kill her.
+    But an inn is what she found, and so that's what she becomes. An innkeeper who serves drinks to heroes and monsters-
+    Actually, mostly monsters. But it's a living, right?
     This is the story of the Wandering Inn.
     `,
     link: 'https://wanderinginn.com/',
@@ -670,9 +593,9 @@ const currentStories = [
   },
   {
     title: 'Delve',
-    description: `Delve is an isekai litrpg that follows an average guy who just happened to wake up in a forest one day. He wasn’t summoned to defeat the demon lord or to save the world or anything like that, at least as far as he can tell. The only creature there to greet him was a regular old squirrel.
-    Soon enough, he meets other people, only to discover that he can’t speak the language, and that not everybody immediately trusts random pajama-wearing strangers they met in the middle of the wilderness. Things generally go downhill from there, at least until the blue boxes start appearing.
-    Delve is a story about finding your way in a new, strange, and dangerous world. It’s about avoiding death, figuring out what the heck is going on, and trying to make some friends along the way. It’s not about getting home, so much as finding a new one.
+    description: `Delve is an isekai litrpg that follows an average guy who just happened to wake up in a forest one day. He wasn't summoned to defeat the demon lord or to save the world or anything like that, at least as far as he can tell. The only creature there to greet him was a regular old squirrel.
+    Soon enough, he meets other people, only to discover that he can't speak the language, and that not everybody immediately trusts random pajama-wearing strangers they met in the middle of the wilderness. Things generally go downhill from there, at least until the blue boxes start appearing.
+    Delve is a story about finding your way in a new, strange, and dangerous world. It's about avoiding death, figuring out what the heck is going on, and trying to make some friends along the way. It's not about getting home, so much as finding a new one.
     Did I mention that there will be math?`,
     link: 'https://www.royalroad.com/fiction/25225/delve',
 
@@ -686,7 +609,7 @@ const currentStories = [
   },
   {
     title: 'How to Avoid Death on a Daily Basis',
-    description: `What if you were transported to a fantasy world with no special abilities, no OP weapons and no status screen to boost your stats? Never mind finding the dragon’s treasure or defeating the Demon Lord, you only need to worry about one thing—how to stay alive.
+    description: `What if you were transported to a fantasy world with no special abilities, no OP weapons and no status screen to boost your stats? Never mind finding the dragon's treasure or defeating the Demon Lord, you only need to worry about one thing-how to stay alive.
     A group of young Brits wake up in a strange, fantastical land with creatures from myth and legend. They are given archaic weapons they don't know how to use and told to do their best.
     Convinced it has to be some kind of virtual reality RPG, all the people summoned form parties and set off on their adventures, leaving behind the people nobody wants in their group.
     Story of my life, thinks Colin.`,
@@ -695,8 +618,8 @@ const currentStories = [
   },
   {
     title: 'He Who Fights With Monsters',
-    description: `Jason wakes up in a mysterious world of magic and monsters. He’ll face off against cannibals, cultists, wizards, monsters, and that’s just the first day. He’s going to need courage, he’s going to need wit and he’s going to need some magic powers of his own. But first, he’s going to need pants.
-    Follow Jason as he makes a place for himself in a world that is strange, yet sometimes strangely familiar. He’ll meet crime lords and aristocrats, gods and monsters on his path from would-be victim to heroic adventurer. At least, he tries to be heroic. It’s hard to be good when all your powers are evil.`,
+    description: `Jason wakes up in a mysterious world of magic and monsters. He'll face off against cannibals, cultists, wizards, monsters, and that's just the first day. He's going to need courage, he's going to need wit and he's going to need some magic powers of his own. But first, he's going to need pants.
+    Follow Jason as he makes a place for himself in a world that is strange, yet sometimes strangely familiar. He'll meet crime lords and aristocrats, gods and monsters on his path from would-be victim to heroic adventurer. At least, he tries to be heroic. It's hard to be good when all your powers are evil.`,
     link: 'https://www.royalroad.com/fiction/26294/he-who-fights-with-monsters',
 
   },
@@ -723,21 +646,13 @@ const currentStories = [
 
   },
   {
-    title: 'There Is No Epic Loot Here, Only Puns',
-    description: `She became a dungeon core.
-    Everything pointed Delta to murdering her way to success. People were just mana farms, right?
-    No, that was wrong. Delta refused. Then everything became odd.`,
-    link: 'https://www.royalroad.com/fiction/15935/there-is-no-epic-loot-here-only-puns',
-
-  },
-  {
     title: "Dungeon Crawler Carl",
     description: `A man. His ex-girlfriend's cat. A sadistic game show unlike anything in the universe: a dungeon crawl where survival depends on killing your prey in the most entertaining way possible.
-    In a flash, every human-erected construction on Earth—from Buckingham Palace to the tiniest of sheds—collapses in a heap, sinking into the ground.
+    In a flash, every human-erected construction on Earth-from Buckingham Palace to the tiniest of sheds-collapses in a heap, sinking into the ground.
     The buildings and all the people inside have all been atomized and transformed into the dungeon: an 18-level labyrinth filled with traps, monsters, and loot. A dungeon so enormous, it circles the entire globe.
     Only a few dare venture inside. But once you're in, you can't get out. And what's worse, each level has a time limit. You have but days to find a staircase to the next level down, or it's game over. In this game, it's not about your strength or your dexterity. It's about your followers, your views. Your clout. It's about building an audience and killing those goblins with style.
     You can't just survive here. You gotta survive big.
-    You gotta fight with vigor, with excitement. You gotta make them stand up and cheer. And if you do have that "it" factor, you may just find yourself with a following. That's the only way to truly survive in this game—with the help of the loot boxes dropped upon you by the generous benefactors watching from across the galaxy.
+    You gotta fight with vigor, with excitement. You gotta make them stand up and cheer. And if you do have that "it" factor, you may just find yourself with a following. That's the only way to truly survive in this game-with the help of the loot boxes dropped upon you by the generous benefactors watching from across the galaxy.
     They call it Dungeon Crawler World. But for Carl, it's anything but a game.`,
     link: 'https://www.royalroad.com/fiction/29358/dungeon-crawler-carl-book-2-carls-doomsday-scenario',
 
@@ -819,12 +734,6 @@ const currentStories = [
 
   },
   {
-    title: 'Artificial Jelly',
-    description: `Born to die and be born again, Gell, the Jellyfae must discover her strange connection to the horrible monsters called humans, that speak with words she understands, but seem to want nothing but her death. Driven by a desire for safety and freedom, she ventures forth to Tread the Sky, and finds more worlds than one.`,
-    link: 'https://www.royalroad.com/fiction/34030/artificial-jelly',
-
-  },
-  {
     title: 'The Gilded Hero',
     description: `To be summoned to another world, arriving in plane of existence filled with magic and potential! Already, you've been given the great privilege of becoming a [Hero] and the honored task of defeating the demon king! Some people might call that the opportunity of a lifetime!
     With the chance to learn to become a master of the sword, to grow more powerful than anyone on Earth could ever dream, what's not to love about being a hero? It's just like the King said: this is destiny calling! This is what you were born to become!
@@ -833,26 +742,10 @@ const currentStories = [
 
   },
   {
-    title: 'Stranger Than Fiction',
-    description: `Faith is like ice-cream. It comes in all flavors. Greek, Norse, Sumerian, Christian— just name it and it's there. Adventures, on the other hand, are like credit cards. The first taste is free, but the price only goes up from there. Family heirlooms, now those are true evil. You get burdened with them for sentimental reasons even if they’re icky. 
-    For Lukas Aguilar, it was a pendant. A small, weird metal nib that, while irritating, seemed harmless. Such convictions are put to test when a ruined goddess stretches her hands from beyond the Sands of Time and grasps his fate, blurring the line between fact and fiction. Now torn away from his former life on Earth, Lukas finds himself trapped in an underground cavern with no escape in sight and hundreds of questions...
-    "Am I still alive? What is this place? Why am I here?"`,
-    link: 'https://www.royalroad.com/fiction/37283/stranger-than-fiction',
-
-  },
-  {
     title: 'Seaborn',
-    description: `Domenic is a sailor who just wants a life at sea. A brewing war between nations turn the already dangerous seas into something perilous. Domenic is forced into an untenable position, one he escapes with his life – though there is a greater cost he’ll have to pay after his deal with the devil.
+    description: `Domenic is a sailor who just wants a life at sea. A brewing war between nations turn the already dangerous seas into something perilous. Domenic is forced into an untenable position, one he escapes with his life - though there is a greater cost he'll have to pay after his deal with the devil.
     Join Domenic as he explores the meaning and cost of both servitude and freedom!`,
     link: 'https://www.royalroad.com/fiction/30131/seaborn',
-
-  },
-  {
-    title: 'Fantasy Science',
-    description: `I loved Biology - always have, and always will. Unfortunately for me, years of fruitless research whittled away what little joy I had left in what I did. Escapism came in the form of reading isekai works, where the stresses of real life seemed so far away.
-    Luckily, I was summoned to a fantasy world of magic, dragons, and other mythical beasts. I didn't even need to deal with the Demon Lord threat, since it seemed that my summoning was a mistake, and all they needed was the Hero who was coincidentally summoned together with me! There was no revenge subplot, no hidden trap directed against me, and they even paid me compensation for their mistake. At long last, I could finally do what I ever wanted to do - experiment for the fun of it!
-    With my new class as a [Biologist], none of this fantasy world's mysteries will be left untouched. Even if the Demon Lord himself comes knocking, nothing will stop me from researching every nook and cranny there is to discover of the magical biology of this world!`,
-    link: 'https://www.royalroad.com/fiction/33378/i-became-a-biologist-in-a-fantasy-world',
 
   },
   {
@@ -872,13 +765,6 @@ const currentStories = [
     If any of that seems interesting to you, do check out the first chapter and let me know what you think.
     Cheers, and thanks for reading.`,
     link: 'https://www.royalroad.com/fiction/35885/leaves-of-terranthir',
-
-  },
-  {
-    title: 'Onward to Providence',
-    description: `Pylo was a woman of trade and travel!
-    She had set out for a life of adventure and exchange with strange new life. She would make deals and exchanges with new fools and new civilizations. She would boldly swindle like no one had swindled before.`,
-    link: 'https://www.royalroad.com/fiction/34353/onward-to-providence',
 
   },
   {
@@ -903,16 +789,8 @@ const currentStories = [
   {
     title: 'Prophecy Approved Companion',
     description: `Qube is an NPC in an AI-driven VR-RPG who avoids her scripted death and blithely continues following the Player, trying to make sense of the normalised nonsense of Fantasy RPGs and accidentally glitching out the world in stranger and stranger ways as she seeks to be the very best Childhood Companion ever.
-    It’s a loving parody of old school RPGs, high fantasy, and every gamer who has ever thought “what happens if I do this...”`,
+    It's a loving parody of old school RPGs, high fantasy, and every gamer who has ever thought “what happens if I do this...”`,
     link: 'https://www.royalroad.com/fiction/35549/prophecy-approved-companion',
-
-  },
-  {
-    title: 'The Primal Hunter',
-    description: `On just another normal Monday, the world changed. The universe had reached a threshold humanity didn’t even know existed, and it was time to finally be integrated into the vast multiverse. A world where power is the only thing that one can truly rely on.
-    Jake, a seemingly average office worker, finds himself thrust into this new world. Into a tutorial filled with dangers and opportunities. In a world that should breed fear and concern, an environment that makes his fellow coworkers falter, Jake instead finds himself thriving.
-    Perhaps… Jake was born for this kind of world, to begin with.`,
-    link: 'https://www.royalroad.com/fiction/36049/the-primal-hunter',
 
   },
 ]
