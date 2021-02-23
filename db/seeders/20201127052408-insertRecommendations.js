@@ -6,15 +6,6 @@ const { User, Story } = require('../models')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-   
-    /*
-      {
-        rating: integer,
-        review: '',
-        userId: integer,
-        storyId: integer,
-      },
-    */
     // Pulling in the recommendations that I wrote myself
     let values = currentRecs;
 

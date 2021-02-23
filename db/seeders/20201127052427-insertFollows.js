@@ -32,7 +32,7 @@ module.exports = {
       // result array I'll add to values array
       let result = [];
       // start is the id I start at, stop is the id I stop at
-      for (let x = start; x <= stop; x++){
+      for (let x = start; x < stop; x++){
         let followerId = x;
         // This is to keep track of previous follows so that I don't have repeats
         let followers = [];
@@ -60,12 +60,17 @@ module.exports = {
       return result;
     }
     // Query for the number of users
-    let numUsers = await User.count();
+    const numUsers = await User.count();
+    const numFollows = 5;
+    const myUser = await User.findOne({ where: { username: "chris" } })
+    const myId = myUser.id;
+    const startId = myId + 1;
+    const stop = numUsers + startId - 1;
     // Calling my function with a starting point, the number of users I have, 
     // and how many follows each user should have. You can also query for the 
     // first id in the table and have the starting point be that number if you
     // want to make follows for all your users
-    let newFollows = makeFollows(2, numUsers, 5);
+    let newFollows = makeFollows(startId, stop, numFollows);
     // Combining the data I manually created with what I created via the function
     values.push(...newFollows)
     
