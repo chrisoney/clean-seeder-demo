@@ -3,20 +3,20 @@ const tempRecs = [
   {
     rating: 3,
     review: 'Long hiatuses, but a fun story overall',
-    user: "chris",
-    story: "Dungeon Crawler Carl"
+    user: 'chris',
+    story: 'Dungeon Crawler Carl'
   },
   {
     rating: 4,
     review: 'Long time between chapters but the world building is top notch',
-    user: "chris",
-    story: "Apocalypse: Generic System"
+    user: 'chris',
+    story: 'Apocalypse: Generic System'
   },
   {
     rating: 5,
     review: 'Fantastic story, would always recommend.',
-    user: "chris",
-    story: "The Wandering Inn"
+    user: 'chris',
+    story: 'The Wandering Inn'
   },
 ];
 
@@ -25,22 +25,22 @@ const tempSubs = [
   {
     book: '0',
     chapter: '124',
-    user: "chris",
-    story: "Dungeon Crawler Carl"
+    user: 'chris',
+    story: 'Dungeon Crawler Carl'
 
   },
   {
     book: '2',
     chapter: '9',
-    user: "chris",
-    story: "Apocalypse: Generic System"
+    user: 'chris',
+    story: 'Apocalypse: Generic System'
 
   },
   {
     book: '8',
     chapter: '8J',
-    user: "chris",
-    story: "The Wandering Inn"
+    user: 'chris',
+    story: 'The Wandering Inn'
   },
 ];
 
@@ -67,20 +67,20 @@ const tempStories = [
 
   },
   {
-    title: "Dungeon Crawler Carl",
+    title: 'Dungeon Crawler Carl',
     description: `A man. His ex-girlfriend's cat. A sadistic game show unlike anything in the universe: a dungeon crawl where survival depends on killing your prey in the most entertaining way possible.
     In a flash, every human-erected construction on Earth-from Buckingham Palace to the tiniest of sheds-collapses in a heap, sinking into the ground.
     The buildings and all the people inside have all been atomized and transformed into the dungeon: an 18-level labyrinth filled with traps, monsters, and loot. A dungeon so enormous, it circles the entire globe.
     Only a few dare venture inside. But once you're in, you can't get out. And what's worse, each level has a time limit. You have but days to find a staircase to the next level down, or it's game over. In this game, it's not about your strength or your dexterity. It's about your followers, your views. Your clout. It's about building an audience and killing those goblins with style.
     You can't just survive here. You gotta survive big.
-    You gotta fight with vigor, with excitement. You gotta make them stand up and cheer. And if you do have that "it" factor, you may just find yourself with a following. That's the only way to truly survive in this game-with the help of the loot boxes dropped upon you by the generous benefactors watching from across the galaxy.
+    You gotta fight with vigor, with excitement. You gotta make them stand up and cheer. And if you do have that 'it' factor, you may just find yourself with a following. That's the only way to truly survive in this game-with the help of the loot boxes dropped upon you by the generous benefactors watching from across the galaxy.
     They call it Dungeon Crawler World. But for Carl, it's anything but a game.`,
     link: 'https://www.royalroad.com/fiction/29358/dungeon-crawler-carl-book-2-carls-doomsday-scenario',
 
   },
   {
     title: 'The Perfect Run',
-    description: `Ryan "Quicksave" Romano is an eccentric adventurer with a strange power: he can create a save-point in time and redo his life whenever he dies. Arriving in New Rome, the glitzy capital of sin of a rebuilding Europe, he finds the city torn between mega-corporations, sponsored heroes, superpowered criminals, and true monsters. It's a time of chaos, where potions can grant the power to rule the world and dangers lurk everywhere. 
+    description: `Ryan 'Quicksave' Romano is an eccentric adventurer with a strange power: he can create a save-point in time and redo his life whenever he dies. Arriving in New Rome, the glitzy capital of sin of a rebuilding Europe, he finds the city torn between mega-corporations, sponsored heroes, superpowered criminals, and true monsters. It's a time of chaos, where potions can grant the power to rule the world and dangers lurk everywhere. 
     Ryan only sees different routes; and from Hero to Villain, he has to try them all. Only then will he achieve his perfect ending... no matter how many loops it takes.`,
     link: 'https://www.royalroad.com/fiction/36735/the-perfect-run',
 
@@ -102,186 +102,179 @@ const tempStories = [
 // Hardcoded data for my own account
 const currentRecs = [
   {
-    rating: 3,
-    review: 'Long hiatuses, but a fun story overall',
-    user: "chris",
-    storyId: 1,
-
-  },
-  {
     rating: 4,
     review: 'Long time between chapters but the world building is top notch',
-    user: "chris",
-    story: "Worth the Candle"
+    user: 'chris',
+    story: 'Worth the Candle'
   },
   {
     rating: 5,
     review: 'Fantastic story, would always recommend.',
-    user: "chris",
-    story: "The Wandering Inn"
+    user: 'chris',
+    story: 'The Wandering Inn'
   },
   {
     rating: 5,
     review: 'One of my favorites',
-    user: "chris",
-    story: "A Practical Guide to Evil"
+    user: 'chris',
+    story: 'A Practical Guide To Evil'
   },
   {
     rating: 4,
     review: 'The writing is a bit verbose, but the story is interesting.',
-    user: "chris",
-    story: "Defiance of the Fall"
+    user: 'chris',
+    story: 'Defiance of the Fall'
   },
   {
     rating: 5,
     review: 'One of my favorite ongoing stories',
-    user: "chris",
-    story: "Delve"
+    user: 'chris',
+    story: 'Delve'
   },
   {
     rating: 3,
     review: 'The writer puts out a ton of great content, but the MC is kinda cringe.',
-    user: "chris",
-    story: "The Legend of Randidly Ghosthound"
+    user: 'chris',
+    story: 'The Legend of Randidly Ghosthound'
   },
   {
     rating: 4,
     review: 'Long hiatus but a really funny, dark story',
-    user: "chris",
-    story: "How to Avoid Death on a Daily Basis"
+    user: 'chris',
+    story: 'How to Avoid Death on a Daily Basis'
   },
   {
     rating: 5,
     review: 'Fantastic worldbuilding even if the MC is annoying',
-    user: "chris",
-    story: "He Who Fights With Monsters"
+    user: 'chris',
+    story: 'He Who Fights With Monsters'
   },
   {
     rating: 5,
     review: `I don't really like space stories but the characters and worldbuilding more and make up for it not being my preference.`,
-    user: "chris",
-    story: "Deeper Darker"
+    user: 'chris',
+    story: 'Deeper Darker'
   },
   {
     rating: 4,
     review: `Really interesting worldbuilding. I can't wait until it 
     starts up again`,
-    user: "chris",
+    user: 'chris',
     story: 'Undermind'
   },
   {
     rating: 5,
     review: `Interesting twists. Unfortunately not being released 
     freely right now`,
-    user: "chris",
-    story: 'Beastborne'
+    user: 'chris',
+    story: 'BeastBorne'
   },
   {
     rating: 5,
     review: 'Absolutely hilarious and the world building is pretty impressive',
-    user: "chris",
-    story: "Dungeon Crawler Carl"
+    user: 'chris',
+    story: 'Dungeon Crawler Carl'
   },
   {
     rating: 4,
     review: `Overpowered MC but I think it addresses it rather well. I wish they would all stop smirking though.`,
-    user: "chris",
+    user: 'chris',
     story: 'Azarinth Healer'
   },
   {
     rating: 4,
     review: `Short story but pretty good`,
-    user: "chris",
+    user: 'chris',
     story: 'Evil Overlord: The Makening'
   },
   {
     rating: 4,
     review: `Part of the story are really cringey but overall it's entertaining`,
-    user: "chris",
+    user: 'chris',
     story: 'Savage Divinity'
   },
   {
     rating: 4,
     review: 'Childish but funny',
-    user: "chris",
+    user: 'chris',
     story: 'Wake of the Ravager'
   },
   {
     rating: 3,
     review: 'The ending of book one leaves much to be desired',
-    user: "chris",
+    user: 'chris',
     story: 'The Humble Life of a Skill Trainer'
   },
   {
     rating: 4,
     review: 'Great writing style. Sometimes it was rather slow-paced',
-    user: "chris",
+    user: 'chris',
     story: 'The Menocht Loop'
   },
   {
     rating: 4,
     review: 'Surprisingly entertaining story about an ant',
-    user: "chris",
+    user: 'chris',
     story: 'Chrysalis'
   },
   {
     rating: 4,
     review: 'Long hiatus. I hope it comes back soon',
-    user: "chris",
+    user: 'chris',
     story: 'Castle Kingside'
   },
   {
     rating: 4,
     review: 'Funny take on quests and fate',
-    user: "chris",
+    user: 'chris',
     story: 'This Quest Is Bullshit'
   },
   {
     rating: 3,
     review: 'Interesting magic system, though pretty slow story progression',
-    user: "chris",
-    story: 'Just a Bystander'
+    user: 'chris',
+    story: 'Just A Bystander'
   },
   {
     rating: 4,
     review: `Long hiatus, but it should be starting again soon. A more realistic approach to isekai`,
-    user: "chris",
+    user: 'chris',
     story: 'The Gilded Hero'
   },
   {
     rating: 4,
     review: 'Not a huge fan of pirate stories but this one won me over',
-    user: "chris",
+    user: 'chris',
     story: 'Seaborn'
   },
   {
     rating: 4,
     review: `Another story that isn't my usual cup of tea, but the writing is incredible and the characters are all likeable or well thought out`,
-    user: "chris",
+    user: 'chris',
     story: 'A Journey of Black and Red'
   },
   {
     rating: 1,
     review: 'Had a great start but it was cancelled far too early.',
-    user: "chris",
+    user: 'chris',
     story: 'Leaves of Terranthir'
   },
   {
     rating: 5,
     review: `Hilarious and great world-building. I hope it the story doesn't run out of steam`,
-    user: "chris",
+    user: 'chris',
     story: 'The Perfect Run'
   },
   {
     rating: 5,
     review: `Hilarious and it makes the MC work for his power`,
-    user: "chris",
+    user: 'chris',
     story: 'Apocalypse: Generic System'
   },
   {
     rating: 4,
     review: 'Cool concept but it moves rather slowly',
-    user: "chris",
+    user: 'chris',
     story: 'Prophecy Approved Companion'
   },
 ]
@@ -291,175 +284,175 @@ const currentSubs = [
   {
     book: '1',
     chapter: '221',
-    user: "chris",
+    user: 'chris',
     story: 'Worth the Candle'
   },
   {
     book: '8',
     chapter: '9',
-    user: "chris",
+    user: 'chris',
     story: 'The Wandering Inn'
   },
   {
     book: '6',
     chapter: 'Epilogue',
-    user: "chris",
+    user: 'chris',
     story: 'A Practical Guide to Evil',
   },
   {
     book: '1',
     chapter: '557',
-    user: "chris",
+    user: 'chris',
     story: 'Defiance of the Fall',
   },
   {
     book: '1',
     chapter: '135',
-    user: "chris",
+    user: 'chris',
     story: 'Delve', 
   },
   {
     book: '1',
     chapter: '1487',
-    user: "chris",
+    user: 'chris',
     story: 'The Legend of Randidly Ghosthound'
   },
   {
     book: '1',
     chapter: '(Reboot) 438: Based',
-    user: "chris",
+    user: 'chris',
     story: 'How to Avoid Death on a Daily Basis',
   },
   {
     book: '1',
     chapter: '390',
-    user: "chris",
+    user: 'chris',
     story: 'He Who Fights With Monsters',
   },
   {
     book: '3',
     chapter: '41',
-    user: "chris",
+    user: 'chris',
     story: 'Deeper Darker',
   },
   {
     book: '4',
     chapter: 'Epilogue',
-    user: "chris",
+    user: 'chris',
     story: 'Undermind',
   },
   {
     book: '3',
     chapter: '89',
-    user: "chris",
+    user: 'chris',
     story: 'Beastborne',
   },
   {
     book: '3',
     chapter: '125',
-    user: "chris",
+    user: 'chris',
     story: 'Dungeon Crawler Carl',
   },
   {
     book: '1',
     chapter: '634',
-    user: "chris",
+    user: 'chris',
     story: 'Azarinth Healer',
   },
   {
     book: '1',
     chapter: 'Completed',
-    user: "chris",
+    user: 'chris',
     story: 'Evil Overlord: The Makening',
   },
   {
     book: '1',
     chapter: '675',
-    user: "chris",
+    user: 'chris',
     story: 'Savage Divinity',
   },
   {
     book: '1',
     chapter: '247',
-    user: "chris",
+    user: 'chris',
     story: 'Wake of the Ravager',
   },
   {
     book: '1',
     chapter: 'Epilogue',
-    user: "chris",
+    user: 'chris',
     story: 'The Humble Life of a Skill Trainer',
   },
   {
     book: '01',
     chapter: 'epilogue',
-    user: "chris",
+    user: 'chris',
     story: 'The Menocht Loop',
   },
   {
     book: '1',
     chapter: '695',
-    user: "chris",
+    user: 'chris',
     story: 'Chrysalis',
   },
   {
     book: '1',
     chapter: '95',
-    user: "chris",
+    user: 'chris',
     story: 'Castle Kingside',
   },
   {
     book: '1',
     chapter: '86',
-    user: "chris",
+    user: 'chris',
     story: 'This Quest Is Bullshit',
   },
   {
     book: '1',
     chapter: '86',
-    user: "chris",
+    user: 'chris',
     storyId: 'Just a Bystander',
   },
   {
     book: '2',
     chapter: '1',
-    user: "chris",
+    user: 'chris',
     story: 'The Gilded Hero',
   },
   {
     book: '1',
     chapter: '40',
-    user: "chris",
+    user: 'chris',
     story: 'Seaborn',
   },
   {
     book: '1',
     chapter: '100',
-    user: "chris",
+    user: 'chris',
     story: 'A Journey of Black and Red',
   },
   {
     book:'-',
     chapter:'-',
-    user: "chris",
+    user: 'chris',
     story: 'Leaves of Terranthir',
   },
   {
     book:'1',
     chapter:'55',
-    user: "chris",
+    user: 'chris',
     story: 'The Perfect Run',
   },
   {
     book:'2',
     chapter:'11',
-    user: "chris",
+    user: 'chris',
     story: 'Apocalypse: Generic System',
   },
   {
     book:'1',
     chapter:'54',
-    user: "chris",
+    user: 'chris',
     story: 'Prophecy Approved Companion',
   },
 ];
@@ -566,19 +559,19 @@ const currentStories = [
 
   },
   {
-    title: "BeastBorne",
+    title: 'BeastBorne',
     description: `A new Founder Marked with otherworldly power. An epic quest to build a Sanctum settlement. A fabled class that wields monstrous magics.`,
     link: 'https://www.amazon.com/Beastborne-Founder-Portal-Fantasy-Chronicles-ebook/dp/B08BYZ1BGD',
 
   },
   {
-    title: "Dungeon Crawler Carl",
+    title: 'Dungeon Crawler Carl',
     description: `A man. His ex-girlfriend's cat. A sadistic game show unlike anything in the universe: a dungeon crawl where survival depends on killing your prey in the most entertaining way possible.
     In a flash, every human-erected construction on Earth-from Buckingham Palace to the tiniest of sheds-collapses in a heap, sinking into the ground.
     The buildings and all the people inside have all been atomized and transformed into the dungeon: an 18-level labyrinth filled with traps, monsters, and loot. A dungeon so enormous, it circles the entire globe.
     Only a few dare venture inside. But once you're in, you can't get out. And what's worse, each level has a time limit. You have but days to find a staircase to the next level down, or it's game over. In this game, it's not about your strength or your dexterity. It's about your followers, your views. Your clout. It's about building an audience and killing those goblins with style.
     You can't just survive here. You gotta survive big.
-    You gotta fight with vigor, with excitement. You gotta make them stand up and cheer. And if you do have that "it" factor, you may just find yourself with a following. That's the only way to truly survive in this game-with the help of the loot boxes dropped upon you by the generous benefactors watching from across the galaxy.
+    You gotta fight with vigor, with excitement. You gotta make them stand up and cheer. And if you do have that 'it' factor, you may just find yourself with a following. That's the only way to truly survive in this game-with the help of the loot boxes dropped upon you by the generous benefactors watching from across the galaxy.
     They call it Dungeon Crawler World. But for Carl, it's anything but a game.`,
     link: 'https://www.royalroad.com/fiction/29358/dungeon-crawler-carl-book-2-carls-doomsday-scenario',
 
@@ -695,7 +688,7 @@ const currentStories = [
   },
   {
     title: 'The Perfect Run',
-    description: `Ryan "Quicksave" Romano is an eccentric adventurer with a strange power: he can create a save-point in time and redo his life whenever he dies. Arriving in New Rome, the glitzy capital of sin of a rebuilding Europe, he finds the city torn between mega-corporations, sponsored heroes, superpowered criminals, and true monsters. It's a time of chaos, where potions can grant the power to rule the world and dangers lurk everywhere. 
+    description: `Ryan 'Quicksave' Romano is an eccentric adventurer with a strange power: he can create a save-point in time and redo his life whenever he dies. Arriving in New Rome, the glitzy capital of sin of a rebuilding Europe, he finds the city torn between mega-corporations, sponsored heroes, superpowered criminals, and true monsters. It's a time of chaos, where potions can grant the power to rule the world and dangers lurk everywhere. 
     Ryan only sees different routes; and from Hero to Villain, he has to try them all. Only then will he achieve his perfect ending... no matter how many loops it takes.`,
     link: 'https://www.royalroad.com/fiction/36735/the-perfect-run',
 
@@ -720,6 +713,12 @@ const currentStories = [
 
   },
 ]
+
+// for (let i = 0; i < currentStories.length; i++){
+//   if (currentStories[i].title !== currentRecs[i].story){
+//     console.log(currentStories[i].title, currentRecs[i].story)
+//   }
+// }
 
 module.exports = { 
   currentRecs, 
