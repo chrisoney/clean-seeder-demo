@@ -460,18 +460,18 @@ const currentSubs = [
 // Hardcoded data for my own account
 const currentFollows = [
   {
-    followerId: 1,
-    followingId: 2,
+    follower: 'chris',
+    following: 'demo'
 
   },
   {
-    followerId: 1,
-    followingId: 3,
+    follower: 'chris',
+    following: 'worry'
 
   },
   {
-    followerId: 1,
-    followingId: 4,
+    follower: 'chris',
+    following: 'matt'
 
   },
 ];
