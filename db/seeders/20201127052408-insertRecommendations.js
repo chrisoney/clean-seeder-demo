@@ -8,7 +8,7 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     // Pulling in the recommendations that I wrote myself
     let values = [];
-    const startingRecs = tempRecs;
+    const startingRecs = currentRecs;
     for (let x = 0; x < startingRecs.length; x++){
       let rec = startingRecs[x];
       const newRec = { rating:rec.rating, review: rec.review }

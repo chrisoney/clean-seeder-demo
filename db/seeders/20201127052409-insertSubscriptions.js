@@ -13,7 +13,7 @@ module.exports = {
     */
     // Grabbing sub seeds I created beforehand
     let values = [];
-    const startingSubs = tempSubs;
+    const startingSubs = currentSubs;
     for (let x = 0; x < startingSubs.length; x++){
       let sub = startingSubs[x];
       const newSub = { book: sub.book, chapter: sub.chapter }
