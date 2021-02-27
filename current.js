@@ -5,21 +5,18 @@ const tempRecs = [
     review: 'Long hiatuses, but a fun story overall',
     user: "chris",
     story: "Dungeon Crawler Carl"
-
   },
   {
     rating: 4,
     review: 'Long time between chapters but the world building is top notch',
     user: "chris",
     story: "Apocalypse: Generic System"
-
   },
   {
     rating: 5,
     review: 'Fantastic story, would always recommend.',
     user: "chris",
     story: "The Wandering Inn"
-
   },
 ];
 
@@ -115,404 +112,361 @@ const currentRecs = [
     rating: 4,
     review: 'Long time between chapters but the world building is top notch',
     user: "chris",
-    storyId: 2,
-
+    story: "Worth the Candle"
   },
   {
     rating: 5,
     review: 'Fantastic story, would always recommend.',
     user: "chris",
-    storyId: 3,
-
+    story: "The Wandering Inn"
   },
   {
     rating: 5,
     review: 'One of my favorites',
     user: "chris",
-    storyId: 4,
-
+    story: "A Practical Guide to Evil"
   },
   {
     rating: 4,
     review: 'The writing is a bit verbose, but the story is interesting.',
     user: "chris",
-    storyId: 5,
-
+    story: "Defiance of the Fall"
   },
   {
     rating: 5,
     review: 'One of my favorite ongoing stories',
     user: "chris",
-    storyId: 6,
-
+    story: "Delve"
   },
   {
-    rating: 4,
+    rating: 3,
     review: 'The writer puts out a ton of great content, but the MC is kinda cringe.',
     user: "chris",
-    storyId: 7,
-
+    story: "The Legend of Randidly Ghosthound"
   },
   {
     rating: 4,
     review: 'Long hiatus but a really funny, dark story',
     user: "chris",
-    storyId: 8,
-
+    story: "How to Avoid Death on a Daily Basis"
   },
   {
     rating: 5,
     review: 'Fantastic worldbuilding even if the MC is annoying',
     user: "chris",
-    storyId: 9,
-
+    story: "He Who Fights With Monsters"
   },
   {
     rating: 5,
     review: `I don't really like space stories but the characters and worldbuilding more and make up for it not being my preference.`,
     user: "chris",
-    storyId: 10,
-
+    story: "Deeper Darker"
   },
   {
     rating: 4,
-    review: `A ridiculous story that knows it's ridiculous`,
+    review: `Really interesting worldbuilding. I can't wait until it 
+    starts up again`,
     user: "chris",
-    storyId: 11,
-
-  },
-  {
-    rating: 0,
-    review: `Really interesting worldbuilding. I can't wait until it starts up again`,
-    user: "chris",
-    storyId: 12,
-
+    story: 'Undermind'
   },
   {
     rating: 5,
-    review: 'I put this on the backlog but I love this story.',
+    review: `Interesting twists. Unfortunately not being released 
+    freely right now`,
     user: "chris",
-    storyId: 13,
-
-  },
-  {
-    rating: 4,
-    review: `Childish and fun`,
-    user: "chris",
-    storyId: 14,
-
+    story: 'Beastborne'
   },
   {
     rating: 5,
-    review: `I love the worldbuilding here and the characters are so much fun`,
+    review: 'Absolutely hilarious and the world building is pretty impressive',
     user: "chris",
-    storyId: 15,
-
+    story: "Dungeon Crawler Carl"
   },
   {
     rating: 4,
-    review: 'Overpowered MC but I think it addresses it rather well. I wish they would all stop smirking though.',
+    review: `Overpowered MC but I think it addresses it rather well. I wish they would all stop smirking though.`,
     user: "chris",
-    storyId: 16,
-
+    story: 'Azarinth Healer'
+  },
+  {
+    rating: 4,
+    review: `Short story but pretty good`,
+    user: "chris",
+    story: 'Evil Overlord: The Makening'
+  },
+  {
+    rating: 4,
+    review: `Part of the story are really cringey but overall it's entertaining`,
+    user: "chris",
+    story: 'Savage Divinity'
+  },
+  {
+    rating: 4,
+    review: 'Childish but funny',
+    user: "chris",
+    story: 'Wake of the Ravager'
   },
   {
     rating: 3,
-    review: 'Very long hiatus but I have high hopes',
+    review: 'The ending of book one leaves much to be desired',
     user: "chris",
-    storyId: 17,
-
+    story: 'The Humble Life of a Skill Trainer'
   },
   {
     rating: 4,
-    review: 'Hate the harem but love the plot',
+    review: 'Great writing style. Sometimes it was rather slow-paced',
     user: "chris",
-    storyId: 18,
-
+    story: 'The Menocht Loop'
+  },
+  {
+    rating: 4,
+    review: 'Surprisingly entertaining story about an ant',
+    user: "chris",
+    story: 'Chrysalis'
+  },
+  {
+    rating: 4,
+    review: 'Long hiatus. I hope it comes back soon',
+    user: "chris",
+    story: 'Castle Kingside'
+  },
+  {
+    rating: 4,
+    review: 'Funny take on quests and fate',
+    user: "chris",
+    story: 'This Quest Is Bullshit'
+  },
+  {
+    rating: 3,
+    review: 'Interesting magic system, though pretty slow story progression',
+    user: "chris",
+    story: 'Just a Bystander'
+  },
+  {
+    rating: 4,
+    review: `Long hiatus, but it should be starting again soon. A more realistic approach to isekai`,
+    user: "chris",
+    story: 'The Gilded Hero'
+  },
+  {
+    rating: 4,
+    review: 'Not a huge fan of pirate stories but this one won me over',
+    user: "chris",
+    story: 'Seaborn'
+  },
+  {
+    rating: 4,
+    review: `Another story that isn't my usual cup of tea, but the writing is incredible and the characters are all likeable or well thought out`,
+    user: "chris",
+    story: 'A Journey of Black and Red'
+  },
+  {
+    rating: 1,
+    review: 'Had a great start but it was cancelled far too early.',
+    user: "chris",
+    story: 'Leaves of Terranthir'
   },
   {
     rating: 5,
-    review: 'So much fun. One of my favorites',
+    review: `Hilarious and great world-building. I hope it the story doesn't run out of steam`,
     user: "chris",
-    storyId: 19,
-
+    story: 'The Perfect Run'
+  },
+  {
+    rating: 5,
+    review: `Hilarious and it makes the MC work for his power`,
+    user: "chris",
+    story: 'Apocalypse: Generic System'
   },
   {
     rating: 4,
-    review: 'Rather slow but a very interesting take on how ',
+    review: 'Cool concept but it moves rather slowly',
     user: "chris",
-    storyId: 20,
-
-  },
-  {
-    rating: 3,
-    review: 'Very slow but kind of interesting',
-    user: "chris",
-    storyId: 21,
-
-  },
-  {
-    rating: 4,
-    review: 'Fun but very short chapters',
-    user: "chris",
-    storyId: 22,
-
-  },
-  {
-    rating: 4,
-    review: 'I have high hopes for this one',
-    user: "chris",
-    storyId: 23,
-
-  },
-  {
-    rating: 4,
-    review: 'Really fun story with some great humor',
-    user: "chris",
-    storyId: 24,
-
-  },
-  {
-    rating: 4,
-    review: 'Very slow but an interesting take on magic',
-    user: "chris",
-    storyId: 25,
-
-  },
-  {
-    rating: 4,
-    review: 'Childish but fun',
-    user: "chris",
-    storyId: 26,
-
-  },
-  {
-    rating: 4,
-    review: 'Dark but interesting. I hope it comes back soon.',
-    user: "chris",
-    storyId: 27,
-
-  },
-  {
-    rating: 3,
-    review: 'The rewrites will hopefully let the writing catch up with the idea',
-    user: "chris",
-    storyId: 28,
-
-  },
-  {
-    rating: 4,
-    review: 'Not my usual cup of tea but worth a read',
-    user: "chris",
-    storyId: 29,
-
+    story: 'Prophecy Approved Companion'
   },
 ]
 
 // Hardcoded data for my own account
 const currentSubs = [
   {
-    book: '0',
-    chapter: 'When the Student is Ready, part 1',
+    book: '1',
+    chapter: '221',
     user: "chris",
-    storyId: 1,
-
+    story: 'Worth the Candle'
   },
   {
-    book: '0',
-    chapter: 'Food and Growth',
+    book: '8',
+    chapter: '9',
     user: "chris",
-    storyId: 2,
-
+    story: 'The Wandering Inn'
   },
   {
     book: '7',
     chapter: 'Interlude - The Tribes of Izril',
     user: "chris",
-    storyId: 3,
-
+    story: 'A Practical Guide to Evil',
   },
   {
     book: '0',
     chapter: 'Rapt',
     user: "chris",
-    storyId: 4,
-
+    story: 'Defiance of the Fall',
   },
   {
     book: '0',
     chapter: '512',
     user: "chris",
-    storyId: 5, 
-
+    story: 'Delve', 
   },
   {
     book: '0',
     chapter: '124',
     user: "chris",
-    storyId: 6,
-
+    story: 'The Legend of Randidly Ghosthound'
   },
   {
     book: '0',
     chapter: '1421',
     user: "chris",
-    storyId: 7,
-
+    story: 'How to Avoid Death on a Daily Basis',
   },
   {
     book: '0',
     chapter: '436',
     user: "chris",
-    storyId: 8,
-
+    story: 'He Who Fights With Monsters',
   },
   {
     book: '0',
     chapter: '352',
     user: "chris",
-    storyId: 9, 
-
+    story: 'Deeper Darker',
   },
   {
     book: '3',
     chapter: '23',
     user: "chris",
-    storyId: 10,
-
+    story: 'Undermind',
   },
   {
     book: '4',
     chapter: '24',
     user: "chris",
-    storyId: 11,
-
+    story: 'Beastborne',
   },
   {
     book: '3',
     chapter: '54',
     user: "chris",
-    storyId: 12,
-
+    story: 'Dungeon Crawler Carl',
   },
   {
     book: '0',
     chapter: '132',
     user: "chris",
-    storyId: 13,
-
+    story: 'Azarinth Healer',
   },
   {
     book: '0',
     chapter: '113',
     user: "chris",
-    storyId: 14,
-
+    story: 'Evil Overlord: The Makening',
   },
   {
     book: '0',
     chapter: '605',
     user: "chris",
-    storyId: 15,
-
+    story: 'Evil Overlord: The Makening',
   },
   {
     book: '0',
     chapter: '20',
     user: "chris",
-    storyId: 16,
-
+    story: 'Savage Divinity',
   },
   {
     book: '0',
     chapter: '658',
     user: "chris",
-    storyId: 17,
-
+    story: 'Wake of the Ravager',
   },
   {
     book: '0',
     chapter: '245',
     user: "chris",
-    storyId: 18,
-
+    story: 'The Humble Life of a Skill Trainer',
   },
   {
     book: '0',
     chapter: '75',
     user: "chris",
-    storyId: 19,
-
+    story: 'The Menocht Loop',
   },
   {
     book: '0',
     chapter: '127',
     user: "chris",
-    storyId: 20,
-
+    story: 'Chrysalis',
   },
   {
     book: '0',
     chapter: '644',
     user: "chris",
-    storyId: 21,
-
+    story: 'Castle Kingside',
   },
   {
     book: '0',
     chapter: '95',
     user: "chris",
-    storyId: 22,
-
+    story: 'This Quest Is Bullshit',
   },
   {
     book: '0',
     chapter: '60',
     user: "chris",
-    storyId: 23, 
-
+    storyId: 'Just a Bystander',
   },
   {
     book: '0',
     chapter: '56',
     user: "chris",
-    storyId: 24,
-
+    story: 'The Gilded Hero',
   },
   {
     book: '2',
     chapter: '6',
     user: "chris",
-    storyId: 25,
-
+    story: 'Seaborn',
   },
   {
-    book: '2',
-    chapter: '1',
+    book: '1',
+    chapter: '100',
     user: "chris",
-    storyId: 26,
-
+    story: 'A Journey of Black and Red',
   },
   {
-    book:'0',
-    chapter:'0',
+    book:'-',
+    chapter:'-',
     user: "chris",
-    storyId: 27,
-
+    story: 'Leaves of Terranthir',
   },
   {
     book:'0',
     chapter:'38',
     user: "chris",
-    storyId: 28,
-
+    story: 'The Perfect Run',
   },
   {
     book:'0',
     chapter:'Selective Attention (2)',
     user: "chris",
-    storyId: 29,
-
+    story: 'Apocalypse: Generic System',
+  },
+  {
+    book:'0',
+    chapter:'Selective Attention (2)',
+    user: "chris",
+    story: 'Prophecy Approved Companion',
   },
 ];
 
