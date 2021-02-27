@@ -25,7 +25,21 @@ module.exports = {
     */
 
     // Bringing in follows I want to come standard
-    let values = currentFollows;
+    let values = [];
+    let startingFollows = currentFollows;
+    for (let i = 0; i < currentFollows.length; i++){
+      let prevFollow = currentFollows[i];
+      const follower = await User.findOne({ 
+        where: { username: prevFollow.follower }
+      });
+      const following = await User.findOne({ 
+        where: { username: prevFollow.following }
+      });
+      values.push({
+        followerId: follower.id,
+        followingId: following.id
+      })
+    }
 
     // Fake follows! There's a joke there!
     function makeFollows(start, stop, numFollows){

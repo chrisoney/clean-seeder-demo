@@ -462,17 +462,14 @@ const currentFollows = [
   {
     follower: 'chris',
     following: 'demo'
-
   },
   {
     follower: 'chris',
     following: 'worry'
-
   },
   {
     follower: 'chris',
     following: 'matt'
-
   },
 ];
 
@@ -719,6 +716,7 @@ const currentStories = [
 //     console.log(currentStories[i].title, currentRecs[i].story)
 //   }
 // }
+
 
 module.exports = { 
   currentRecs, 

@@ -22,20 +22,20 @@ module.exports = {
 
     // Making new recommendations with the number of reviews per user, 
     // number of users I have, number of stories I have, fake reviews, and id to start at
-    function makeRecommendations(number, user, story, reviews, start) {
+    function makeRecommendations(number, numUsers, story, reviews, userStart, storyStart) {
       const result = [];
       // Looping through all the users except the first one to add reviews for
       // them 
-      for (let k = start; k <= user; k++){
+      for (let k = userStart; k < numUsers; k++){
         // Keeping track of which stories this user has reviewed
         let stories = [];
         for (let i = 0; i < number; i++){
           // Grabbing a random review index
           let spot = Math.floor(Math.random() * reviews.length)
           // Grabbing a random story
-          let storyId =  Math.floor(Math.random() * story) + 1;
+          let storyId =  Math.floor(Math.random() * story) + storyStart;
           // Making sure this user hasn't reviewed this story yet
-          while (stories.includes(storyId)) storyId =  Math.floor(Math.random() * story) + 1;
+          while (stories.includes(storyId)) storyId =  Math.floor(Math.random() * story) + storyStart;
           // Adding the id of the story so we can check against it later on
           // when randomly grabbing a story id
           stories.push(storyId);
@@ -72,14 +72,16 @@ module.exports = {
     const numUsers = await User.count();
     const numStories = await Story.count();
     const numReviews = 5;
-    let start = await User.findOne();
-    start = start.id + 1;
+    let userStart = await User.findOne();
+    userStart = userStart.id + 1;
+    let storyStart = await Story.findOne();
+    storyStart = storyStart.id;
     // Grabbing those new fake recommendations. 5 is the number of recommendations
     // per user. numUsers and numStories are self explanatory. Reviews are just
     // a few fake reviews I created/stole from a website (I'm sure you can tell
     // which is which). Fun idea: make different tiers of reviews you can choose
     // from based on a rating!
-    let recArray = makeRecommendations(numReviews, numUsers, numStories, reviews, start);
+    let recArray = makeRecommendations(numReviews, numUsers + userStart - 1, numStories, reviews, userStart, storyStart);
     // Combining what I wrote myself with what I used the function to create
     values.push(...recArray);
 
