@@ -27,21 +27,21 @@ const tempRecs = [
 const tempSubs = [
   {
     book: '0',
-    chapter: 'When the Student is Ready, part 1',
+    chapter: '124',
     user: "chris",
     story: "Dungeon Crawler Carl"
 
   },
   {
-    book: '0',
-    chapter: 'Food and Growth',
+    book: '2',
+    chapter: '9',
     user: "chris",
     story: "Apocalypse: Generic System"
 
   },
   {
-    book: '7',
-    chapter: 'Interlude - The Tribes of Izril',
+    book: '8',
+    chapter: '8J',
     user: "chris",
     story: "The Wandering Inn"
   },
@@ -107,203 +107,203 @@ const currentRecs = [
   {
     rating: 3,
     review: 'Long hiatuses, but a fun story overall',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 1,
 
   },
   {
     rating: 4,
     review: 'Long time between chapters but the world building is top notch',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 2,
 
   },
   {
     rating: 5,
     review: 'Fantastic story, would always recommend.',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 3,
 
   },
   {
     rating: 5,
     review: 'One of my favorites',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 4,
 
   },
   {
     rating: 4,
     review: 'The writing is a bit verbose, but the story is interesting.',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 5,
 
   },
   {
     rating: 5,
     review: 'One of my favorite ongoing stories',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 6,
 
   },
   {
     rating: 4,
     review: 'The writer puts out a ton of great content, but the MC is kinda cringe.',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 7,
 
   },
   {
     rating: 4,
     review: 'Long hiatus but a really funny, dark story',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 8,
 
   },
   {
     rating: 5,
     review: 'Fantastic worldbuilding even if the MC is annoying',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 9,
 
   },
   {
     rating: 5,
     review: `I don't really like space stories but the characters and worldbuilding more and make up for it not being my preference.`,
-    userId: 1, // Chris
+    user: "chris",
     storyId: 10,
 
   },
   {
     rating: 4,
     review: `A ridiculous story that knows it's ridiculous`,
-    userId: 1, // Chris
+    user: "chris",
     storyId: 11,
 
   },
   {
     rating: 0,
     review: `Really interesting worldbuilding. I can't wait until it starts up again`,
-    userId: 1, // Chris
+    user: "chris",
     storyId: 12,
 
   },
   {
     rating: 5,
     review: 'I put this on the backlog but I love this story.',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 13,
 
   },
   {
     rating: 4,
     review: `Childish and fun`,
-    userId: 1, // Chris
+    user: "chris",
     storyId: 14,
 
   },
   {
     rating: 5,
     review: `I love the worldbuilding here and the characters are so much fun`,
-    userId: 1, // Chris
+    user: "chris",
     storyId: 15,
 
   },
   {
     rating: 4,
     review: 'Overpowered MC but I think it addresses it rather well. I wish they would all stop smirking though.',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 16,
 
   },
   {
     rating: 3,
     review: 'Very long hiatus but I have high hopes',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 17,
 
   },
   {
     rating: 4,
     review: 'Hate the harem but love the plot',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 18,
 
   },
   {
     rating: 5,
     review: 'So much fun. One of my favorites',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 19,
 
   },
   {
     rating: 4,
     review: 'Rather slow but a very interesting take on how ',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 20,
 
   },
   {
     rating: 3,
     review: 'Very slow but kind of interesting',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 21,
 
   },
   {
     rating: 4,
     review: 'Fun but very short chapters',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 22,
 
   },
   {
     rating: 4,
     review: 'I have high hopes for this one',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 23,
 
   },
   {
     rating: 4,
     review: 'Really fun story with some great humor',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 24,
 
   },
   {
     rating: 4,
     review: 'Very slow but an interesting take on magic',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 25,
 
   },
   {
     rating: 4,
     review: 'Childish but fun',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 26,
 
   },
   {
     rating: 4,
     review: 'Dark but interesting. I hope it comes back soon.',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 27,
 
   },
   {
     rating: 3,
     review: 'The rewrites will hopefully let the writing catch up with the idea',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 28,
 
   },
   {
     rating: 4,
     review: 'Not my usual cup of tea but worth a read',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 29,
 
   },
@@ -314,203 +314,203 @@ const currentSubs = [
   {
     book: '0',
     chapter: 'When the Student is Ready, part 1',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 1,
 
   },
   {
     book: '0',
     chapter: 'Food and Growth',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 2,
 
   },
   {
     book: '7',
     chapter: 'Interlude - The Tribes of Izril',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 3,
 
   },
   {
     book: '0',
     chapter: 'Rapt',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 4,
 
   },
   {
     book: '0',
     chapter: '512',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 5, 
 
   },
   {
     book: '0',
     chapter: '124',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 6,
 
   },
   {
     book: '0',
     chapter: '1421',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 7,
 
   },
   {
     book: '0',
     chapter: '436',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 8,
 
   },
   {
     book: '0',
     chapter: '352',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 9, 
 
   },
   {
     book: '3',
     chapter: '23',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 10,
 
   },
   {
     book: '4',
     chapter: '24',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 11,
 
   },
   {
     book: '3',
     chapter: '54',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 12,
 
   },
   {
     book: '0',
     chapter: '132',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 13,
 
   },
   {
     book: '0',
     chapter: '113',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 14,
 
   },
   {
     book: '0',
     chapter: '605',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 15,
 
   },
   {
     book: '0',
     chapter: '20',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 16,
 
   },
   {
     book: '0',
     chapter: '658',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 17,
 
   },
   {
     book: '0',
     chapter: '245',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 18,
 
   },
   {
     book: '0',
     chapter: '75',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 19,
 
   },
   {
     book: '0',
     chapter: '127',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 20,
 
   },
   {
     book: '0',
     chapter: '644',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 21,
 
   },
   {
     book: '0',
     chapter: '95',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 22,
 
   },
   {
     book: '0',
     chapter: '60',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 23, 
 
   },
   {
     book: '0',
     chapter: '56',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 24,
 
   },
   {
     book: '2',
     chapter: '6',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 25,
 
   },
   {
     book: '2',
     chapter: '1',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 26,
 
   },
   {
     book:'0',
     chapter:'0',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 27,
 
   },
   {
     book:'0',
     chapter:'38',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 28,
 
   },
   {
     book:'0',
     chapter:'Selective Attention (2)',
-    userId: 1, // Chris
+    user: "chris",
     storyId: 29,
 
   },
