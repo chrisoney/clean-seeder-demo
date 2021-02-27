@@ -297,7 +297,7 @@ const currentSubs = [
     book: '6',
     chapter: 'Epilogue',
     user: 'chris',
-    story: 'A Practical Guide to Evil',
+    story: 'A Practical Guide To Evil',
   },
   {
     book: '1',
@@ -345,7 +345,7 @@ const currentSubs = [
     book: '3',
     chapter: '89',
     user: 'chris',
-    story: 'Beastborne',
+    story: 'BeastBorne',
   },
   {
     book: '3',
@@ -411,7 +411,7 @@ const currentSubs = [
     book: '1',
     chapter: '86',
     user: 'chris',
-    storyId: 'Just a Bystander',
+    story: 'Just A Bystander',
   },
   {
     book: '2',
