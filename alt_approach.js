@@ -1,5 +1,3 @@
-const { restart } = require("nodemon");
-
 const userStart = 1;
 const storyStart = 1;
 
@@ -179,7 +177,168 @@ const addStoryIdToRecs = () => {
   return result;
 }
 
+const altSubs = [
+  {
+    book: '1',
+    chapter: '221',
+    userId: userStart,
+  },
+  {
+    book: '8',
+    chapter: '9',
+    userId: userStart,
+  },
+  {
+    book: '6',
+    chapter: 'Epilogue',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: '557',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: '135',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: '1487',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: '(Reboot) 438: Based',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: '390',
+    userId: userStart,
+  },
+  {
+    book: '3',
+    chapter: '41',
+    userId: userStart,
+  },
+  {
+    book: '4',
+    chapter: 'Epilogue',
+    userId: userStart,
+  },
+  {
+    book: '3',
+    chapter: '89',
+    userId: userStart,
+  },
+  {
+    book: '3',
+    chapter: '125',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: '634',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: 'Completed',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: '675',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: '247',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: 'Epilogue',
+    userId: userStart,
+  },
+  {
+    book: '01',
+    chapter: 'epilogue',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: '695',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: '95',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: '86',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: '86',
+    userId: userStart,
+  },
+  {
+    book: '2',
+    chapter: '1',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: '40',
+    userId: userStart,
+  },
+  {
+    book: '1',
+    chapter: '100',
+    userId: userStart,
+  },
+  {
+    book:'-',
+    chapter:'-',
+    userId: userStart,
+  },
+  {
+    book:'1',
+    chapter:'55',
+    userId: userStart,
+  },
+  {
+    book:'2',
+    chapter:'11',
+    userId: userStart,
+  },
+  {
+    book:'1',
+    chapter:'54',
+    userId: userStart,
+  },
+]
+
+const addStoryIdToSubs = () => {
+  const result = [];
+  for (let i = 0; i < altSubs.length; i++){
+    let temp = altSubs[i];
+    temp.storyId = storyStart + i;
+    result.push(temp);
+  }
+  return result;
+}
+
+console.dir(addStoryIdToRecs())
+
 module.exports = {
   altFollows,
   addStoryIdToRecs,
+  addStoryIdToSubs
 }
