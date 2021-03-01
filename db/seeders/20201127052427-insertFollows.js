@@ -1,6 +1,7 @@
 'use strict';
 // Importing data for my user
 const { currentFollows } = require('../../current.js');
+const { altFollows } = require('../../alt_approach')
 // Importing User so that I can query with it
 const { User } = require('../models')
 

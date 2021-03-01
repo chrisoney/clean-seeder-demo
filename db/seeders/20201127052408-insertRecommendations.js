@@ -1,6 +1,7 @@
 'use strict';
 // tempRecs is just for demo lecture purposes
 const { tempRecs, currentRecs } = require('../../current.js');
+const { addStoryIdToRecs } = require('../../alt_approach.js');
 // importing these so we can query those tables for counts
 const { User, Story } = require('../models')
 
