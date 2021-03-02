@@ -28,8 +28,8 @@ module.exports = {
     // Bringing in follows I want to come standard
     let values = [];
     let startingFollows = currentFollows;
-    for (let i = 0; i < currentFollows.length; i++){
-      let prevFollow = currentFollows[i];
+    for (let i = 0; i < startingFollows.length; i++){
+      let prevFollow = startingFollows[i];
       const follower = await User.findOne({ 
         where: { username: prevFollow.follower }
       });
@@ -41,6 +41,9 @@ module.exports = {
         followingId: following.id
       })
     }
+
+    //Alt approach
+    // values = altFollows;
 
     // Fake follows! There's a joke there!
     function makeFollows(start, stop, numFollows){
