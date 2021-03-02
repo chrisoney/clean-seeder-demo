@@ -27,6 +27,8 @@ module.exports = {
 
     // Bringing in follows I want to come standard
     let values = [];
+
+    // Dynamic approach to creating starting follows
     let startingFollows = currentFollows;
     for (let i = 0; i < startingFollows.length; i++){
       let prevFollow = startingFollows[i];
@@ -42,7 +44,7 @@ module.exports = {
       })
     }
 
-    //Alt approach
+    // Alt approach to creating starting follows
     // values = altFollows;
 
     // Fake follows! There's a joke there!

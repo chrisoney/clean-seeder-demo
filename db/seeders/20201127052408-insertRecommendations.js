@@ -9,6 +9,8 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     // Pulling in the recommendations that I wrote myself
     let values = [];
+
+    // Dynamic approach to adding starting recommendations
     const startingRecs = currentRecs;
     for (let x = 0; x < startingRecs.length; x++){
       let rec = startingRecs[x];
@@ -19,6 +21,9 @@ module.exports = {
       newRec.storyId = story.id;
       values.push(newRec);
     }
+
+    // Alt approach to adding starting recommendations
+    // values = addStoryIdToRecs;
      
 
     // Making new recommendations with the number of reviews per user, 
