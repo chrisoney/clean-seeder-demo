@@ -15,9 +15,11 @@ module.exports = {
       }
     */
 
+    // Step 1
     // Initializing an empty array
     let values = [];
 
+    // Option 1
     // Dynamic approach to creating starting follows
     let startingFollows = currentFollows;
 
@@ -42,9 +44,11 @@ module.exports = {
       })
     }
 
+    // Option 2
     // Alt approach to creating starting follows
     // values = altFollows;
 
+    // Step 2 function
     // Fake follows! There's a joke there!
     function makeFollows(start, stop, numFollows){
       // result array I'll add to values array
@@ -78,6 +82,8 @@ module.exports = {
       // returning the result
       return result;
     }
+
+    // Step 2 setup
     // Query for the number of users
     const numUsers = await User.count();
     // Decide how many follows each user should have
@@ -89,6 +95,7 @@ module.exports = {
     // Stopping point is calculated with adding the number of users to the first id
     const stop = numUsers + myId;
 
+    // Step 2 implemented
     // Calling my function with a starting point, the number of users I have, 
     // and how many follows each user should have. 
     let newFollows = makeFollows(startId, stop, numFollows);
