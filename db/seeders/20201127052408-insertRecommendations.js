@@ -9,7 +9,7 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     // Step 1
     // Initializing the array that I will pass into the bulk insert
-    let values = [];
+    const values = [];
 
     // Option 1
     // Dynamic approach to adding starting recommendations
@@ -32,7 +32,7 @@ module.exports = {
 
     // Option 2
     // Alt approach to adding starting recommendations
-    // values = addStoryIdToRecs();
+    // values.push(...addStoryIdToRecs());
 
     // Step 2
     // Making new recommendations with the number of reviews per user,
@@ -59,10 +59,10 @@ module.exports = {
           // Making sure this user hasn't reviewed this story yet
           while (stories.includes(storyId))
             storyId = Math.floor(Math.random() * numStories) + storyStart;
-          
+
           // Adding the id of the story so we can check against it later on when randomly grabbing a story id
           stories.push(storyId);
-          
+
           // Adding this new review to the results I have collected
           result.push({
             // completely random rating
@@ -108,7 +108,7 @@ module.exports = {
     let storyStart = await Story.findOne();
     storyStart = storyStart.id;
 
-    // Step 2 implementation 
+    // Step 2 implementation
     // Creating those new fake recommendations.
     // numRecs is the number of recommendations per user.
     // numUsers and numStories are self explanatory.

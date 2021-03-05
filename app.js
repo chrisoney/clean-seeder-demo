@@ -42,10 +42,10 @@ store.sync();
 
 // We don't have the code for these routes
 
-// app.use(restoreUser)
+// app.use(restoreUser);
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
-// app.use(requireAuth)
+// app.use(requireAuth);
 // app.use('/stories', storiesRouter);
 
 // Just so I can grab the data before I clear out my database for whatever reason.

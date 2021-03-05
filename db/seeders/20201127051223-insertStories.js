@@ -22,8 +22,8 @@ module.exports = {
     // Initializing an empty array
     let result = [];
 
-    // Looping through four times. Each iteration will correspond with grabbing stories from one page of popular stories. That's just how this api works
-    for (let i = 1; i <= 4; i++) {
+    // Looping through three times. Each iteration will correspond with grabbing stories from one page of popular stories. That's just how this api works
+    for (let i = 1; i <= 3; i++) {
       // Grabbing the data from a trending page
       const { data } = await api.fictions.getPopular(i);
 
@@ -46,7 +46,7 @@ module.exports = {
     // Step 4: Combining it all
     // Combining what I collected and what I started with
     startingStories.push(...result);
-    
+
     // Step 5: Seeding!
     return queryInterface.bulkInsert('Stories', startingStories, {});
   },

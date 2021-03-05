@@ -1,6 +1,8 @@
-const userStart = 1;
-const storyStart = 1;
+// I check the database for the first id on both the Users and Stories tables
+const userStart = 89;
+const storyStart = 195;
 
+// The only follows I prebuilt were with me as a follower and the next three users as the ones being followed
 const altFollows = [
   {
     followerId: userStart,
@@ -16,7 +18,7 @@ const altFollows = [
   },
 ];
 
-
+// Building objects with the information that won't change, or is simply the id of my user. The order *does* matter
 const altRecs = [
   {
     rating: 4,
@@ -167,6 +169,7 @@ const altRecs = [
   },
 ]
 
+// Looping through the recommendations and adding the storyId to each, based on the starting id of Stories.
 const addStoryIdToRecs = () => {
   const result = [];
   for (let i = 0; i < altRecs.length; i++){
@@ -177,6 +180,7 @@ const addStoryIdToRecs = () => {
   return result;
 }
 
+// Same setup as that previous array. The order again *does* matter
 const altSubs = [
   {
     book: '1',
@@ -324,7 +328,7 @@ const altSubs = [
     userId: userStart,
   },
 ]
-
+// Looping through the subscriptions and adding the storyId to each, based on the starting id of Stories
 const addStoryIdToSubs = () => {
   const result = [];
   for (let i = 0; i < altSubs.length; i++){

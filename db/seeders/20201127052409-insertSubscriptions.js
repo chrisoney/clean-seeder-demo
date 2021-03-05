@@ -12,14 +12,16 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     // Step 1
     // Initializing an empty array to hold the converted subs
-    let values = [];
+    const values = [];
+
+    // Option 1
     // Bringing in the prebuilt objects
     const startingSubs = currentSubs;
     // Looping through each prebuilt sub
-    for (let x = 0; x < startingSubs.length; x++){
+    for (let x = 0; x < startingSubs.length; x++)  {
       let sub = startingSubs[x];
       // Adding the attributes that won't change to the new sub
-      const newSub = { book: sub.book, chapter: sub.chapter }
+      const newSub = { book: sub.book, chapter: sub.chapter };;
       // Querying for the sub's user and grabbing the id
       const user = await User.findOne({ where: { username: sub.user } });
       newSub.userId = user.id;
@@ -30,10 +32,14 @@ module.exports = {
       values.push(newSub);
     }
 
+    // Option 2
+    // Alt approach
+    // values.push(...addStoryIdToSubs());
+
     // Step 2
     // Grabbing all of the existing recommendations for users that aren't my own account
     // Querying for my user and grabbing the id
-    const myUser = await User.findOne({ where: { username: "chris" } })
+    const myUser = await User.findOne({ where: { username: 'chris' } });
     const myId = myUser.id;
 
     // I decided to build the subs based on the existing recommendations
@@ -41,10 +47,10 @@ module.exports = {
     let oldArray = await Recommendation.findAll({
       where: {
         userId: {
-          [Op.ne]: myId
-        }
-      }
-    })
+          [Op.ne]: myId,
+        },
+      },
+    });
 
     // Step 3
     // Determining the outer bound for book number
@@ -53,7 +59,7 @@ module.exports = {
     const maxChapter = 30;
     // Using the recommendations to create subscriptions that match
     // I'm looping through the array of recommendations
-    for (let i = 0; i < oldArray.length; i++){
+    for (let i = 0; i < oldArray.length; i++) {
       // Grabbing each recommendation
       let oldObj = oldArray[i];
       // Pushing a object into the array for future seeding
@@ -67,9 +73,9 @@ module.exports = {
         // We want these last two to be the same as what is in the recommendation
         userId: oldObj.userId,
         storyId: oldObj.storyId,
-      })
+      });
     }
-    
+
     // Step 4
     // Seeding that new data
     return queryInterface.bulkInsert('Subscriptions', values, {});
