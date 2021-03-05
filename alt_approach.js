@@ -335,8 +335,6 @@ const addStoryIdToSubs = () => {
   return result;
 }
 
-console.dir(addStoryIdToRecs())
-
 module.exports = {
   altFollows,
   addStoryIdToRecs,

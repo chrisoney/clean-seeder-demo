@@ -711,12 +711,6 @@ const currentStories = [
   },
 ]
 
-// for (let i = 0; i < currentStories.length; i++){
-//   if (currentStories[i].title !== currentRecs[i].story){
-//     console.log(currentStories[i].title, currentRecs[i].story)
-//   }
-// }
-
 
 module.exports = { 
   currentRecs, 

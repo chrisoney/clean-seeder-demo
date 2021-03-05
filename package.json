@@ -9,6 +9,7 @@
     "scss": "node-sass --watch ./public/scss -o ./public/stylesheets"
   },
   "dependencies": {
+    "@l1lly/royalroadl-api": "^0.14.0",
     "bcryptjs": "^2.4.3",
     "connect-session-sequelize": "^7.0.4",
     "cookie-parser": "~1.4.4",
