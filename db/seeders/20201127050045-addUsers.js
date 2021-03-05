@@ -7,6 +7,7 @@ const faker = require('faker');
 module.exports = {
   up: (queryInterface, Sequelize) => {
 
+    // Step 1
     // Creating a sample password for the users that I want to keep.
     // hashSync is synchronous so we don't have to await it
     const password = bcrypt.hashSync('Hunter12!', 10);
@@ -35,6 +36,7 @@ module.exports = {
       },
     ];
 
+    // Step 2
     // Creating randomized users
     // This is the number of randomized users I want to create
     const numNewUsers = 45;
@@ -52,6 +54,7 @@ module.exports = {
       users.push(newUser);
     }
     
+    // Step 3
     // Actually inserting that data into the table
     return queryInterface.bulkInsert('Users', users, {});
   },

@@ -100,9 +100,11 @@ module.exports = {
     // and how many follows each user should have. 
     let newFollows = makeFollows(startId, stop, numFollows);
 
+    // Step 3
     // Combining the data I manually created with what I created via the function
     values.push(...newFollows)
     
+    // Step 4
     // The last of the seeding
     return queryInterface.bulkInsert('Follows', values, {});
   },
