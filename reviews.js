@@ -24,16 +24,16 @@ module.exports = {
       `Kind of funny, but relies far too much on shock value.`,
     ],
     partTwo: [
-      `sample text`,
-      `sample text`,
-      `sample text`,
-      `sample text`,
-      `sample text`,
+      `I don't know how much longer I'm going to stick with this story, but I'm not quite ready to give up on it.`,
+      `I wouldn't say that it's absolute trash or anything. Maybe it's just not my cup of tea.`,
+      `The plot progression is just soooo slow. Other than that, the writing is acceptable.`,
+      `The writer just can't seem to settle on what they want to do with the story.`,
+      `It's got a lot of potential, but needs some pretty severe editing to make it worthwhile.`,
     ],
   },
   3: {
     partOne: [
-      `sample text`,
+      `Not amazing, not terrible. A real middle of the ground story.`,
       `sample text`,
       `sample text`,
       `sample text`,
