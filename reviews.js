@@ -34,10 +34,10 @@ module.exports = {
   3: {
     partOne: [
       `Not amazing, not terrible. A real middle of the ground story.`,
-      `sample text`,
-      `sample text`,
-      `sample text`,
-      `sample text`,
+      `There some editing that needs to be done, but I'm excited for the potential of this story.`,
+      `The writer is really finding her stride at this point in the story.`,
+      `Almost gave this story a pass, but now I'm glad that I didn't.`,
+      `A fun read, but somewhat forgettable.`,
     ],
     partTwo: [
       `sample text`,
