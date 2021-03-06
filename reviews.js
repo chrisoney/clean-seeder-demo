@@ -72,11 +72,11 @@ module.exports = {
       `I cannot recommend this story highly enough.`,
     ],
     partTwo: [
-      `sample text`,
-      `sample text`,
-      `sample text`,
-      `sample text`,
-      `sample text`,
+      `If you're still undecided on giving it a chance, take it from me. You won't regret it!`,
+      `The characters are well-written, the world-building is amazing, and the pace of the plot is flawless.`,
+      `This story has twists and turns that you will never expect, and yet it cleverly hides clues throughout the chapters leading up to each one!`,
+      `I'm not exaggerating when I say that this may be the best web serial I've ever read.`,
+      `There's a reason why this tale is so popular. The author has created a truly unique take on classic magic, and the rest of the writing doesn't disappoint either!`,
     ],
   },
 };
