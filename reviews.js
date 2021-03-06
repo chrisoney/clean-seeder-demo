@@ -40,10 +40,10 @@ module.exports = {
       `A fun read, but somewhat forgettable.`,
     ],
     partTwo: [
-      `sample text`,
-      `sample text`,
-      `sample text`,
-      `sample text`,
+      `The characters are well thought out but sometimes they seem to blend together too much personality-wise.`,
+      `The world-building is absolutely fantastic, but other areas in the writing aren't quite up to par.`,
+      `I really like how it uses text formatting to enhancing the reading experience, but sometimes it's a bit overdone.`,
+      `A few of the side-stories seem to kill the pace of the main story, but overall it's not much of a detriment to enjoying it.`,
       `sample text`,
     ],
   },
@@ -65,11 +65,11 @@ module.exports = {
   },
   5: {
     partOne: [
-      `sample text`,
-      `sample text`,
-      `sample text`,
-      `sample text`,
-      `sample text`,
+      `My favorite story by my favorite author.`,
+      `This has to be the funniest tale I've ever read in my life.`,
+      `Absolutely amazing! Reading a chapter from this story is the best part of my week.`,
+      `I subscribe to this story on Patreon because I just can't wait to get new chapters!`,
+      `I cannot recommend this story highly enough.`,
     ],
     partTwo: [
       `sample text`,
