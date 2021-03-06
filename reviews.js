@@ -8,11 +8,11 @@ module.exports = {
       `If you're interested in this story, move on to the next one instead.`,
     ],
     partTwo: [
-      `sample text`,
-      `sample text`,
-      `sample text`,
-      `sample text`,
-      `sample text`,
+      `The writing is terrible, there are typos everywhere, and the characters are boring.`,
+      `The magic system doesn't make any sense.`,
+      `The MC is waaaaaaaaay too edgy.`,
+      `Whenever the characters are faced with any sort of difficulty at all they just magically solve it with minimum effort.`,
+      `If I have to read 'his instincts told him that he was right' one more time, I'll hurl.`,
     ],
   },
   2: {
