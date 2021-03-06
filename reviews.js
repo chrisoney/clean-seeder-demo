@@ -1,4 +1,4 @@
-const reviews = {
+module.exports = {
   1: {
     partOne: [
       `I'm not a fan of this story.`,
@@ -17,11 +17,11 @@ const reviews = {
   },
   2: {
     partOne: [
-      `sample text`,
-      `sample text`,
-      `sample text`,
-      `sample text`,
-      `sample text`,
+      `Started off great, but it seems to be on a downward slope.`,
+      `Started off terrible, but the writer is starting to improve.`,
+      `Not the worst story I've ever read, but not great either.`,
+      `A bit disappointing because I normally enjoy this writer's work.`,
+      `Kind of funny, but relies far too much on shock value.`,
     ],
     partTwo: [
       `sample text`,
