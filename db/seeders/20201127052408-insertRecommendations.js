@@ -57,13 +57,18 @@ module.exports = {
           const rating = Math.floor(Math.random() * 5) + 1;
 
           // Building the review
-          // Grabbing the array of options for the first half of the review at the level of the randomly generated rating
+          // Initializing an empty array to hold the different parts of the new review
           let review = [];
+          // Iterating through the values of the object that is the value tied to the key of the rating that I just generated. Each of these values will be an array of possible review parts (in this case I only have two parts that I will combine)
           Object.values(reviews[rating]).forEach(value => {
+            // Saving the length of the array to a variable for easier readability
             const arrLength = value.length;
-            const index = Math.floor(Math.random() * arrLength)
+            // Choosing a random index in the current array
+            const index = Math.floor(Math.random() * arrLength);
+            // Adding the review part at the random index to the review I've built so far
             review.push(value[index]);
-          })
+          });
+          // Joining the different parts (2) of the review array on a space.
           review = review.join(' ');
           
           // Grabbing a random storyId from the ones that are available
