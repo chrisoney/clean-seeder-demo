@@ -16,17 +16,36 @@ module.exports = {
     // Dynamic approach to adding starting recommendations
     // Start with the data I pulled in from the other file
     const startingRecs = currentRecs;
+
+    // Query for the users and stories so that I don't have to do another query for each object I cycle through
+    const currentUsers = await User.findAll({
+      attributes: ['id', 'username'],
+    });
+    const usersObj = {};
+    currentUsers.forEach((user) => {
+      usersObj[`${user.username}`] = user.id;
+    });
+    const currentStories = await Story.findAll({
+      attributes: ['id', 'username'],
+    });
+    const storiesObj = {};
+    currentStories.forEach((story) => {
+      storiesObj[`${story.title}`] = story.id;
+    });
+
     // Looping through each object in that prebuilt array
     for (let x = 0; x < startingRecs.length; x++) {
       let rec = startingRecs[x];
       // Creating a new recommendation with the attributes that won't change
       const newRec = { rating: rec.rating, review: rec.review };
       // Querying for the user and using the id for my new rec
-      const user = await User.findOne({ where: { username: rec.user } });
-      newRec.userId = user.id;
+      // const user = await User.findOne({ where: { username: rec.user } });
+      // newRec.userId = user.id;
+      newRec.userId = usersObj[rec.user];
       // Querying for the story and using the id for my new rec
-      const story = await Story.findOne({ where: { title: rec.story } });
-      newRec.storyId = story.id;
+      // const story = await Story.findOne({ where: { title: rec.story } });
+      // newRec.storyId = story.id;
+      newRec.storyId = storiesObj[rec.story];
       // Adding this new rec to my existing values
       values.push(newRec);
     }
@@ -60,7 +79,7 @@ module.exports = {
           // Initializing an empty array to hold the different parts of the new review
           let review = [];
           // Iterating through the values of the object that is the value tied to the key of the rating that I just generated. Each of these values will be an array of possible review parts (in this case I only have two parts that I will combine)
-          Object.values(reviews[rating]).forEach(value => {
+          Object.values(reviews[rating]).forEach((value) => {
             // Saving the length of the array to a variable for easier readability
             const arrLength = value.length;
             // Choosing a random index in the current array
@@ -70,7 +89,7 @@ module.exports = {
           });
           // Joining the different parts (2) of the review array on a space.
           review = review.join(' ');
-          
+
           // Grabbing a random storyId from the ones that are available
           let storyId = Math.floor(Math.random() * numStories) + storiesStart;
           // Making sure this user hasn't reviewed this story yet
