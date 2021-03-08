@@ -17,18 +17,23 @@ module.exports = {
     // Start with the data I pulled in from the other file
     const startingRecs = currentRecs;
 
-    // Query for the users and stories so that I don't have to do another query for each object I cycle through
+    // Query for all of the Users and limit the attributes down to id and username
     const currentUsers = await User.findAll({
       attributes: ['id', 'username'],
     });
+    // Initialize and empty object to hold the data I want to use to search
     const usersObj = {};
+    // Cycle through the users that I queried for and add a username: id key-value pair for easy reference
     currentUsers.forEach((user) => {
       usersObj[`${user.username}`] = user.id;
     });
+    // Query for all of the Stories and limit the attributes down to id and title
     const currentStories = await Story.findAll({
-      attributes: ['id', 'username'],
+      attributes: ['id', 'title'],
     });
+    // Initialize and empty object to hold the data I want to use to search
     const storiesObj = {};
+    // Cycle through the stories that I queried for and add a title: id key-value pair for easy reference
     currentStories.forEach((story) => {
       storiesObj[`${story.title}`] = story.id;
     });
@@ -38,13 +43,9 @@ module.exports = {
       let rec = startingRecs[x];
       // Creating a new recommendation with the attributes that won't change
       const newRec = { rating: rec.rating, review: rec.review };
-      // Querying for the user and using the id for my new rec
-      // const user = await User.findOne({ where: { username: rec.user } });
-      // newRec.userId = user.id;
+      // Using the users reference object I created earlier (~line 25)
       newRec.userId = usersObj[rec.user];
-      // Querying for the story and using the id for my new rec
-      // const story = await Story.findOne({ where: { title: rec.story } });
-      // newRec.storyId = story.id;
+      // Using the stories reference object I created earlier (~line 35)
       newRec.storyId = storiesObj[rec.story];
       // Adding this new rec to my existing values
       values.push(newRec);
