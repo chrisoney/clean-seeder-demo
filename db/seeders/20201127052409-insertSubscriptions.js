@@ -17,17 +17,37 @@ module.exports = {
     // Option 1
     // Bringing in the prebuilt objects
     const startingSubs = currentSubs;
+
+    // Query for all of the Users and limit the attributes down to id and username
+    const currentUsers = await User.findAll({
+      attributes: ['id', 'username'],
+    });
+    // Initialize and empty object to hold the data I want to use to search
+    const usersObj = {};
+    // Cycle through the users that I queried for and add a username: id key-value pair for easy reference
+    currentUsers.forEach((user) => {
+      usersObj[`${user.username}`] = user.id;
+    });
+    // Query for all of the Stories and limit the attributes down to id and title
+    const currentStories = await Story.findAll({
+      attributes: ['id', 'title'],
+    });
+    // Initialize and empty object to hold the data I want to use to search
+    const storiesObj = {};
+    // Cycle through the stories that I queried for and add a title: id key-value pair for easy reference
+    currentStories.forEach((story) => {
+      storiesObj[`${story.title}`] = story.id;
+    });
+
     // Looping through each prebuilt sub
-    for (let x = 0; x < startingSubs.length; x++)  {
+    for (let x = 0; x < startingSubs.length; x++) {
       let sub = startingSubs[x];
       // Adding the attributes that won't change to the new sub
-      const newSub = { book: sub.book, chapter: sub.chapter };;
-      // Querying for the sub's user and grabbing the id
-      const user = await User.findOne({ where: { username: sub.user } });
-      newSub.userId = user.id;
-      // Querying for the sub's story and grabbing the id
-      const story = await Story.findOne({ where: { title: sub.story } });
-      newSub.storyId = story.id;
+      const newSub = { book: sub.book, chapter: sub.chapter }
+      // Using the users reference object I created earlier (~line 25)
+      newRec.userId = usersObj[rec.user];
+      // Using the stories reference object I created earlier (~line 35)
+      newRec.storyId = storiesObj[rec.story];
       // Adding this converted sub to the array
       values.push(newSub);
     }
