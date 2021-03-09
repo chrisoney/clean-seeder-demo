@@ -23,24 +23,31 @@ module.exports = {
     // Dynamic approach to creating starting follows
     let startingFollows = currentFollows;
 
+    // Query for all of the Users and limit the attributes down to id and username
+    const currentUsers = await User.findAll({
+      attributes: ['id', 'username'],
+    });
+    // Initialize and empty object to hold the data I want to use to search
+    const usersObj = {};
+    // Cycle through the users that I queried for and add a username: id key-value pair for easy reference
+    currentUsers.forEach((user) => {
+      usersObj[`${user.username}`] = user.id;
+    });
+
     // Looping through the follows to convert usernames into the primary keys, so that they can be used as foreign keys
     for (let i = 0; i < startingFollows.length; i++) {
       // Each follow from my own objects
       let prevFollow = startingFollows[i];
 
-      // Querying for the follower
-      const follower = await User.findOne({
-        where: { username: prevFollow.follower },
-      });
-      // Querying for the following
-      const following = await User.findOne({
-        where: { username: prevFollow.following },
-      });
+      // Finding the follower within the object I've built for users
+      const followerId = userObj[prevFollow.follower];
+      // Finding the User being followed within the object I've built for users
+      const followingId = userObj[prevFollow.following];
 
       // Passing in a new object with the numbers of the primary keys, so that I can use them as foreign keys
       values.push({
-        followerId: follower.id,
-        followingId: following.id,
+        followerId,
+        followingId,
       });
     }
 
