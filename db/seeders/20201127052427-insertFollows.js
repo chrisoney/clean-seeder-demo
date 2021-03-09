@@ -40,9 +40,9 @@ module.exports = {
       let prevFollow = startingFollows[i];
 
       // Finding the follower within the object I've built for users
-      const followerId = userObj[prevFollow.follower];
+      const followerId = usersObj[prevFollow.follower];
       // Finding the User being followed within the object I've built for users
-      const followingId = userObj[prevFollow.following];
+      const followingId = usersObj[prevFollow.following];
 
       // Passing in a new object with the numbers of the primary keys, so that I can use them as foreign keys
       values.push({

@@ -45,9 +45,9 @@ module.exports = {
       // Adding the attributes that won't change to the new sub
       const newSub = { book: sub.book, chapter: sub.chapter }
       // Using the users reference object I created earlier (~line 25)
-      newSub.userId = usersObj[rec.user];
+      newSub.userId = usersObj[sub.user];
       // Using the stories reference object I created earlier (~line 35)
-      newSub.storyId = storiesObj[rec.story];
+      newSub.storyId = storiesObj[sub.story];
       // Adding this converted sub to the array
       values.push(newSub);
     }

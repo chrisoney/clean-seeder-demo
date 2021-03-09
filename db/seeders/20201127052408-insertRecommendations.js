@@ -37,7 +37,6 @@ module.exports = {
     currentStories.forEach((story) => {
       storiesObj[`${story.title}`] = story.id;
     });
-
     // Looping through each object in that prebuilt array
     for (let x = 0; x < startingRecs.length; x++) {
       let rec = startingRecs[x];
@@ -50,7 +49,6 @@ module.exports = {
       // Adding this new rec to my existing values
       values.push(newRec);
     }
-
     // Option 2
     // Alt approach to adding starting recommendations
     // values.push(...addStoryIdToRecs());
@@ -122,10 +120,10 @@ module.exports = {
     // Choosing how many reviews each user should have
     const numRecs = 20;
     // Finding the first user in my database and grabbing the id, then adding one because I don't want to add reviews to 'chris'
-    let usersStart = await User.findOne();
+    let usersStart = await User.findOne({ order: ['id'] });
     usersStart = usersStart.id + 1;
     // Finding the first story in my database and grabbing the id
-    let storiesStart = await Story.findOne();
+    let storiesStart = await Story.findOne({ order: ['id'] });
     storiesStart = storiesStart.id;
 
     // Step 2 implementation
