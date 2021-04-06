@@ -13,7 +13,7 @@ const { restoreUser, requireAuth } = require('./auth');
 const methodOverride = require('method-override');
 const { session_secret } = require('./config');
 const { asyncHandler } = require('./routes/utils');
-const { User, Recommendation, Subscription } = require('./db/models')
+const { User, Story, Recommendation, Subscription } = require('./db/models');
 const app = express();
 
 // view engine setup
@@ -42,33 +42,32 @@ store.sync();
 
 // We don't have the code for these routes
 
-// app.use(restoreUser);
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
-// app.use(requireAuth);
-// app.use('/stories', storiesRouter);
+app.use(restoreUser);
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use(requireAuth);
+app.use('/stories', storiesRouter);
 
 // Just so I can grab the data before I clear out my database for whatever reason.
 app.get("/query-tester", asyncHandler( async(req, res) => {
   const userToTest = 1;
   const data = await User.findByPk(userToTest, {
-    attributes: ["username"],
-    include: [{
-      model: Subscription,
-      as: 'subscriptions',
-      order: [
-        ["storyId", "ASC"]
-      ]
-    },
-    {
-      model: Recommendation,
-      as: 'recommendations',
-      order: [
-        ["storyId", "ASC"]
-      ]
-    }
-  ]
-  })
+    attributes: ['username'],
+    include: [
+      {
+        model: Subscription,
+        as: 'subscriptions',
+        order: [['storyId', 'ASC']],
+      },
+      {
+        model: Recommendation,
+        as: 'recommendations',
+        order: [
+          ['storyId', 'ASC']
+        ],
+      },
+    ],
+  });
   res.json({ data })
 }))
 

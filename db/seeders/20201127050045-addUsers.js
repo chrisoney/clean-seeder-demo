@@ -6,7 +6,6 @@ const faker = require('faker');
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-
     // Step 1
     // Creating a sample password for the users that I want to keep.
     // hashSync is synchronous so we don't have to await it
@@ -17,7 +16,6 @@ module.exports = {
         username: 'chris',
         email: 'chris@chris.com',
         hashedPassword: password,
-
       },
       {
         username: 'demo',
@@ -40,20 +38,20 @@ module.exports = {
     // Creating randomized users
     // This is the number of randomized users I want to create
     const numNewUsers = 45;
-      
+
     // Each loop will create a new user
 
-    for (let i = 5; i < numNewUsers; i++){
-      // This will be each new user
-      let newUser = {
-        username: faker.internet.userName(),
-        email: faker.internet.email(),
-        // Making the password easy to figure out if I want to log into another user. The number after password will directly correlate to the id of the user
-        hashedPassword: bcrypt.hashSync(`password${i}`, 10),
-      }
-      users.push(newUser);
-    }
-    
+    // for (let i = 5; i < numNewUsers; i++) {
+    //   // This will be each new user
+    //   let newUser = {
+    //     username: faker.internet.userName(),
+    //     email: faker.internet.email(),
+    //     // Making the password easy to figure out if I want to log into another user. The number after password will directly correlate to the id of the user
+    //     hashedPassword: bcrypt.hashSync(`password${i}`, 10),
+    //   };
+    //   users.push(newUser);
+    // }
+
     // Step 3
     // Actually inserting that data into the table
     return queryInterface.bulkInsert('Users', users, {});
@@ -62,5 +60,5 @@ module.exports = {
   down: (queryInterface, Sequelize) => {
     // Down function will just drop the whole table
     return queryInterface.bulkDelete('Users', null, {});
-  }
+  },
 };

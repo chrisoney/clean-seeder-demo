@@ -1,5 +1,5 @@
 // I check the database for the first id on both the Users and Stories tables
-const userStart = 89;
+const userStart = 53;
 const storyStart = 195;
 
 // The only follows I prebuilt were with me as a follower and the next three users as the ones being followed
