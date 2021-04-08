@@ -50,7 +50,7 @@ app.use('/stories', storiesRouter);
 
 // Just so I can grab the data before I clear out my database for whatever reason.
 app.get("/query-tester", asyncHandler( async(req, res) => {
-  const userToTest = 1;
+  const userToTest = 45;
   const data = await User.findByPk(userToTest, {
     attributes: ['username'],
     include: [

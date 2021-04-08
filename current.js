@@ -87,7 +87,7 @@ const tempStories = [
   },
   {
     title: 'Apocalypse: Generic System',
-    description: `Jeb Trapper tried to kill himself. The gun jammed.
+    description: `Jeb Trapper tried to escape. The gun jammed.
     Two months later the vet is participating in underground trials of ecstacy to treat his PTSD.
     Everything seemed to be going great until...
     
@@ -692,7 +692,7 @@ const currentStories = [
   },
   {
     title: 'Apocalypse: Generic System',
-    description: `Jeb Trapper tried to kill himself. The gun jammed.
+    description: `Jeb Trapper tried to escape. The gun jammed.
     Two months later the vet is participating in underground trials of ecstacy to treat his PTSD.
     Everything seemed to be going great until...
     

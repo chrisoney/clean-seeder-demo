@@ -16,7 +16,7 @@ module.exports = {
 
     // Option 1
     // Bringing in the prebuilt objects
-    const startingSubs = tempSubs;
+    const startingSubs = currentSubs;
 
     // Query for all of the Users and limit the attributes down to id and username
     const currentUsers = await User.findAll({
@@ -56,45 +56,45 @@ module.exports = {
     // // Alt approach
     // // values.push(...addStoryIdToSubs());
 
-    // // Step 2
-    // // Grabbing all of the existing recommendations for users that aren't my own account
-    // // Querying for my user and grabbing the id
-    // const myUser = await User.findOne({ where: { username: 'chris' } });
-    // const myId = myUser.id;
+    // Step 2
+    // Grabbing all of the existing recommendations for users that aren't my own account
+    // Querying for my user and grabbing the id
+    const myUser = await User.findOne({ where: { username: 'chris' } });
+    const myId = myUser.id;
 
-    // // I decided to build the subs based on the existing recommendations
-    // // Here I'm just grabbing every recommendation that isn't connected to my user
-    // let oldArray = await Recommendation.findAll({
-    //   where: {
-    //     userId: {
-    //       [Op.ne]: myId,
-    //     },
-    //   },
-    // });
+    // I decided to build the subs based on the existing recommendations
+    // Here I'm just grabbing every recommendation that isn't connected to my user
+    let oldArray = await Recommendation.findAll({
+      where: {
+        userId: {
+          [Op.ne]: myId,
+        },
+      },
+    });
 
-    // // Step 3
-    // // Determining the outer bound for book number
-    // const maxBook = 5;
-    // // Determining the outer bound for chapter number
-    // const maxChapter = 30;
-    // // Using the recommendations to create subscriptions that match
-    // // I'm looping through the array of recommendations
-    // for (let i = 0; i < oldArray.length; i++) {
-    //   // Grabbing each recommendation
-    //   let oldObj = oldArray[i];
-    //   // Pushing a object into the array for future seeding
-    //   // Book and chapter numbers are randomized
-    //   // userId and storyId will match the recommendation I'm working off of
-    //   values.push({
-    //     // Completely random book
-    //     book: `${Math.floor(Math.random() * maxBook)}`,
-    //     // Completely random chapter
-    //     chapter: `${Math.floor(Math.random() * maxChapter)}`,
-    //     // We want these last two to be the same as what is in the recommendation
-    //     userId: oldObj.userId,
-    //     storyId: oldObj.storyId,
-    //   });
-    // }
+    // Step 3
+    // Determining the outer bound for book number
+    const maxBook = 5;
+    // Determining the outer bound for chapter number
+    const maxChapter = 30;
+    // Using the recommendations to create subscriptions that match
+    // I'm looping through the array of recommendations
+    for (let i = 0; i < oldArray.length; i++) {
+      // Grabbing each recommendation
+      let oldObj = oldArray[i];
+      // Pushing a object into the array for future seeding
+      // Book and chapter numbers are randomized
+      // userId and storyId will match the recommendation I'm working off of
+      values.push({
+        // Completely random book
+        book: `${Math.floor(Math.random() * maxBook)}`,
+        // Completely random chapter
+        chapter: `${Math.floor(Math.random() * maxChapter)}`,
+        // We want these last two to be the same as what is in the recommendation
+        userId: oldObj.userId,
+        storyId: oldObj.storyId,
+      });
+    }
 
     // Step 4
     // Seeding that new data
