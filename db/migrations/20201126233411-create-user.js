@@ -31,6 +31,7 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        // Key point
         // This is so that we can ignore it in the seeders
         defaultValue: Sequelize.fn('now')
       }

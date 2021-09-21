@@ -47,6 +47,7 @@ module.exports = {
         defaultValue: Sequelize.fn('now')
       }
     }, {
+      // Key point
       // This is to set up a composite unique constraint on two different columns
       uniqueKeys: {
         actions_unique: {

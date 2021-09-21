@@ -47,6 +47,7 @@ module.exports = {
         username: faker.internet.userName(),
         email: faker.internet.email(),
         // Making the password easy to figure out if I want to log into another user. The number after password will directly correlate to the id of the user
+        // Key point
         hashedPassword: bcrypt.hashSync(`password${i}`, 10),
       };
       users.push(newUser);
@@ -58,7 +59,8 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    // Down function will just drop the whole table
-    return queryInterface.bulkDelete('Users', null, {});
+    // Key point
+    // Down function will just drop the whole table, and reset the primary keys
+    return queryInterface.bulkDelete('Users', null, { truncate: true, cascade: true, restartIdentity: true });
   },
 };
