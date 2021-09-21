@@ -14,4 +14,5 @@ Now, in an event listener, we can do something like this:
 const button = document.querySelector('.like-button')
 const storyId = button.dataset.storyId
 const bookshelfId = button.dataset.bookshelfRandomwordId
+console.log(button.dataset)
 ```
