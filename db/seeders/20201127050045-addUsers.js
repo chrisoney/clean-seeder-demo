@@ -59,8 +59,7 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    // Key point
-    // Down function will just drop the whole table, and reset the primary keys
+    // If you're reading this from a future cohort, be extremely careful with this. Building out dynamic seeds via model queries in the files is a superior method and should be practiced as much as possible. 
     return queryInterface.bulkDelete('Users', null, { truncate: true, cascade: true, restartIdentity: true });
   },
 };
